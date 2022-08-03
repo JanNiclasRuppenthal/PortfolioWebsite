@@ -4,21 +4,29 @@
     <Header/>
   </section>
 
-  <section class="reveal">
-    <MyTools/>
-  </section>
+  <div class="distance">
+    <section class="reveal">
+      <MyTools/>
+    </section>
+    </div>
 
-  <section class="reveal">
-    <MyTimeline/>
-  </section>
+  <div class="distance">
+    <section class="reveal">
+      <MyTimeline/>
+    </section>
+  </div>
 
-  <section class="reveal">
-    <ContactMe/>
-  </section>
-
- <section class="reveal">
-  <HelloWorld/>
- </section>
+  <div class="distance">
+    <section class="reveal">
+      <ContactMe/>
+    </section>
+  </div>
+  
+  <div class="distance">
+    <section class="reveal">
+      <HelloWorld/>
+    </section>
+  </div>
 
 </template>
 
@@ -60,7 +68,7 @@ methods: {
 
 },
 
-mounted() {
+beforeMount() {
   window.addEventListener("scroll", this.reveal);
 }
 
@@ -70,7 +78,7 @@ mounted() {
 </script>
 
 <style>
-#app {
+#app, body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -82,17 +90,23 @@ mounted() {
 
   margin-left: 5%;
   margin-right: 5%;
+  
 }
 
 section {
-  margin-bottom: 75%;
+  padding-bottom: 10%;
+
+}
+
+.distance {
+  padding-top: 60%;
 }
 
 .reveal{
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: 1s all ease;
 }
 .reveal.active{
   transform: translateY(0);
