@@ -1,4 +1,4 @@
-<template>
+<!--template>
   <v-timeline class="timeline"
     align-top
     :dense="$vuetify.breakpoint.smAndDown"
@@ -60,4 +60,4 @@
 .timeline {
 color: #ffffff;
 }
-</style>
+</style-->

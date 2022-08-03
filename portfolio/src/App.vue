@@ -4,17 +4,17 @@
     <Header/>
   </section>
 
-  <div class="distance">
+  <!--div class="distance">
     <section class="reveal">
       <MyTools/>
     </section>
-    </div>
+    </div-->
 
-  <div class="distance">
+  <!--div class="distance">
     <section class="reveal">
       <MyTimeline/>
     </section>
-  </div>
+  </div-->
 
   <div class="distance">
     <section class="reveal">
