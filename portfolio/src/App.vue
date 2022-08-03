@@ -1,12 +1,4 @@
 <template>
-<<<<<<< Updated upstream
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App. This is a test"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-=======
 
   <section class="reveal active">
     <Header/>
@@ -38,15 +30,10 @@ import MyTimeline from './components/MyTimeline.vue';
 import ContactMe from './components/ContactMe.vue';
 
 
->>>>>>> Stashed changes
 
 export default {
   name: 'App',
   components: {
-<<<<<<< Updated upstream
-    HelloWorld
-  }
-=======
     Header,
     HelloWorld,
     MyTools,
@@ -77,7 +64,6 @@ mounted() {
   window.addEventListener("scroll", this.reveal);
 }
 
->>>>>>> Stashed changes
 }
 
 
@@ -89,11 +75,6 @@ mounted() {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-<<<<<<< Updated upstream
-  color: #2c3e50;
-  margin-top: 60px;
-}
-=======
   color: #ffffff;
   background-color: #121212;
   margin-top: 0%;
@@ -118,5 +99,4 @@ section {
   opacity: 1;
 }
 
->>>>>>> Stashed changes
 </style>
