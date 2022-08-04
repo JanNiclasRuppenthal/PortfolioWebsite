@@ -1,20 +1,20 @@
 <template>
-
+<div class="root">
   <section class="reveal active">
     <Header/>
   </section>
 
-  <!--div class="distance">
+  <div class="distance">
     <section class="reveal">
       <MyTools/>
     </section>
-    </div-->
+    </div>
 
-  <!--div class="distance">
+  <div class="distance">
     <section class="reveal">
       <MyTimeline/>
     </section>
-  </div-->
+  </div>
 
   <div class="distance">
     <section class="reveal">
@@ -27,12 +27,12 @@
       <HelloWorld/>
     </section>
   </div>
-
+</div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import HelloWorld from './components/HelloWorld.vue';
 import MyTools from './components/MyTools.vue';
 import MyTimeline from './components/MyTimeline.vue';
 import ContactMe from './components/ContactMe.vue';
@@ -42,8 +42,8 @@ import ContactMe from './components/ContactMe.vue';
 export default {
   name: 'App',
   components: {
-    Header,
     HelloWorld,
+    Header,
     MyTools,
     MyTimeline,
     ContactMe
@@ -84,8 +84,8 @@ beforeMount() {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  background-color: #121212;
-  margin-top: 0%;
+  background-color: #121212ee;
+  margin-top: 5%;
   min-height: 100%;
 
   margin-left: 5%;
@@ -95,6 +95,8 @@ beforeMount() {
 
 section {
   padding-bottom: 10%;
+  padding-right: 5%;
+  padding-left: 10%;
 
 }
 
