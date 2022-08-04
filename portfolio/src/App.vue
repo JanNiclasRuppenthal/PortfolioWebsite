@@ -94,21 +94,21 @@ beforeMount() {
 }
 
 section {
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   padding-right: 5%;
-  padding-left: 10%;
+  padding-left: 5%;
 
 }
 
 .distance {
-  padding-top: 60%;
+  padding-top: 50%;
 }
 
 .reveal{
   position: relative;
   transform: translateY(100px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: 2s all ease;
 }
 .reveal.active{
   transform: translateY(0);

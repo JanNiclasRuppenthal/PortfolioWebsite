@@ -1,5 +1,10 @@
-<!--template>
-  <v-timeline class="timeline"
+<template>
+<div class="root">
+  <h1 class="timeline">My Timeline</h1>
+  <v-divider class="divider"></v-divider>
+
+  <template>
+  <v-timeline
     align-top
     :dense="$vuetify.breakpoint.smAndDown"
   >
@@ -11,7 +16,7 @@
       fill-dot
     >
       <v-card
-        :color="item.color"
+        :color="black"
         dark
       >
         <v-card-title class="text-h6">
@@ -20,7 +25,7 @@
         <v-card-text class="white text--primary">
           <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
           <v-btn
-            :color="item.color"
+            color="#00ffff"
             class="mx-0"
             outlined
           >
@@ -31,24 +36,32 @@
     </v-timeline-item>
   </v-timeline>
 </template>
+
+</div>
+
+
+</template>
+
+
+
 <script>
   export default {
     data: () => ({
       items: [
         {
-          color: 'red lighten-2',
+          color: '#8b008b',
           icon: 'mdi-star',
         },
         {
-          color: 'purple darken-1',
+          color: '#8b008b',
           icon: 'mdi-book-variant',
         },
         {
-          color: 'green lighten-1',
+          color: '#8b008b',
           icon: 'mdi-airballoon',
         },
         {
-          color: 'indigo',
+          color: '#8b008b',
           icon: 'mdi-buffer',
         },
       ],
@@ -58,6 +71,12 @@
 
 <style>
 .timeline {
-color: #ffffff;
+  text-align: left;
 }
-</style-->
+
+.divider {
+    border-color: aqua !important;
+    margin-bottom: 10%;
+}
+
+</style>
