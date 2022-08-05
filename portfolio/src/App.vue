@@ -101,7 +101,7 @@ section {
 }
 
 .distance {
-  padding-top: 50%;
+  padding-top: 20%;
 }
 
 .reveal{

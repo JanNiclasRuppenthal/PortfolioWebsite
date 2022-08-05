@@ -106,7 +106,7 @@ h3 {
 
 .subheader {
     color: #ffffff !important;
-    margin-top: 225px;
+    margin-top: 160px;
     text-align: center;
 
     animation: subheader 2s ease infinite;
