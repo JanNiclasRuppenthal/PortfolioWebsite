@@ -25,7 +25,7 @@
         <v-card-text class="white text--primary">
           <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
           <v-btn
-            color="#00ffff"
+            color="#8b008b"
             class="mx-0"
             outlined
           >
@@ -50,19 +50,19 @@
       items: [
         {
           color: '#8b008b',
-          icon: 'mdi-star',
+          icon: 'mdi-application',
         },
         {
           color: '#8b008b',
-          icon: 'mdi-book-variant',
+          icon: 'mdi-application',
         },
         {
           color: '#8b008b',
-          icon: 'mdi-airballoon',
+          icon: 'mdi-application',
         },
         {
           color: '#8b008b',
-          icon: 'mdi-buffer',
+          icon: 'mdi-application',
         },
       ],
     }),
@@ -79,4 +79,7 @@
     margin-bottom: 10%;
 }
 
+.text-h6 {
+  color: aqua;
+}
 </style>
