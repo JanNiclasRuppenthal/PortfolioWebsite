@@ -3,16 +3,15 @@
   <h1 class="tools">My Tools</h1>
   <v-divider class="divider"></v-divider>
 
-  <div class="cards" align-top :dense="$vuetify.breakpoint.smAndDown">
+  <div class="cards">
 
     
-      <v-card @mouseover="revealJava = true" @mouseleave="revealJava = false"
-        class="Java mx-auto" width="250" height="250" color="#000000">
+      <v-card class="Java mx-auto" @mouseover="revealJava = true" @mouseleave="revealJava = false"
+        min-width="250" min-height="250" color="#000000">
         <v-card-text>
-          <h1>Java</h1>
+          <h1 class="title">Java</h1>
         </v-card-text>
-        <!-- Source: https://www.oracle.com/java/duke/-->
-        <v-img src="..\src\assets\duke-java-mascot.jpg" max-width="250" max-height="200"></v-img>
+        <v-img max-width="250" max-height="200"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
           <v-btn text color="#8b008b" @click="revealJava = true">Learn More</v-btn>
@@ -31,15 +30,13 @@
         </v-expand-transition>
       </v-card>  
     
-
       
-      <v-card @mouseover="revealCSharp = true" @mouseleave="revealCSharp = false"
-        class="CSharp mx-auto" width="250" height="250" color="#000000">
+      <v-card class="CSharp mx-auto" @mouseover="revealCSharp = true" @mouseleave="revealCSharp = false"
+         min-width="250" height="250" color="#000000">
         <v-card-text>
-          <h1>C#</h1>
+          <h1 class="title">C#</h1>
         </v-card-text>
-        <!-- Source: https://en.wikipedia.org/wiki/File:Csharp_Logo.png-->
-        <v-img src="..\src\assets\csharp.png" max-width="250" max-height="146"></v-img>
+        <v-img max-width="250" max-height="146"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
           <v-btn text color="#8b008b" @click="revealCSharp = true">Learn More</v-btn>
@@ -58,13 +55,12 @@
       </v-card>  
 
 
-      <v-card @mouseover="revealPython = true" @mouseleave="revealPython = false"
-        class="Python mx-auto" width="250" height="250" color="#000000">
+      <v-card class="Python mx-auto" @mouseover="revealPython = true" @mouseleave="revealPython = false"
+         min-width="250" height="250" color="#000000">
         <v-card-text>
-          <h1>Python</h1>
+          <h1 class="title">Python</h1>
         </v-card-text>
-        <!-- Source: https://www.python.org/community/logos/-->
-        <v-img src="..\src\assets\python.jpg" max-width="250" max-height="145"></v-img>
+        <v-img max-width="250" max-height="145"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
           <v-spanner></v-spanner>
@@ -84,13 +80,12 @@
       </v-card>  
 
 
-      <v-card @mouseover="revealUnity = true" @mouseleave="revealUnity = false"
-        class="UnityEngine mx-auto" width="250" height="250" color="#000000">
+      <v-card  class="UnityEngine mx-auto" @mouseover="revealUnity = true" @mouseleave="revealUnity = false"
+        min-width="250" height="250" color="#000000">
         <v-card-text>
-          <h1>Unity Engine</h1>
+          <h1 class="title">Unity Engine</h1>
         </v-card-text>
-        <!-- Source: https://www.oracle.com/java/duke/-->
-        <v-img src="..\src\assets\placeholder.png" max-width="250" max-height="200"></v-img>
+        <v-img max-width="250" max-height="200"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
           <v-btn text color="#8b008b" @click="revealUnity = true">Learn More</v-btn>
@@ -145,7 +140,6 @@
   overflow-x: scroll;
 }
 
-
 p {
   text-align: left;
   color: white;
@@ -165,25 +159,11 @@ p {
 }
 
 
-.UnityEngine {
-  margin-right: 5%;
-}
 
-
-.Java h1{
+.title{
   color:aqua;
-}
-
-.CSharp h1{
-  color:aqua;
-}
-
-.Python h1{
-  color:aqua;
-}
-
-.UnityEngine h1{
-  color:aqua;
+  margin-bottom: 50px;
+  margin-top: 100px;
 }
 
 
