@@ -28,7 +28,7 @@
   
   <div class="distance">
     <section class="reveal">
-      <HelloWorld/>
+      <PageFooter/>
     </section>
   </div>
 </div>
@@ -36,21 +36,21 @@
 
 <script>
 import Header from './components/Header.vue';
-import HelloWorld from './components/HelloWorld.vue';
 import MyTools from './components/MyTools.vue';
 import MyTimeline from './components/MyTimeline.vue';
 import ContactMe from './components/ContactMe.vue';
+import PageFooter from './components/PageFooter.vue';
 
 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Header,
     MyTools,
     MyTimeline,
-    ContactMe
+    ContactMe,
+    PageFooter
 },
 
 methods: {

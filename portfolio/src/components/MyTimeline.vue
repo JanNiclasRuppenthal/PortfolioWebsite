@@ -4,42 +4,54 @@
   <v-divider class="divider"></v-divider>
 
   <template>
-  <v-timeline
-    align-top
-    :dense="$vuetify.breakpoint.smAndDown"
-  >
-    <v-timeline-item
-      v-for="(item, i) in items"
-      :key="i"
-      :color="item.color"
-      :icon="item.icon"
-      fill-dot
-    >
-      <v-card
-        :color="black"
-        dark
-      >
-        <v-card-title class="text-h6">
-          Lorem Ipsum Dolor
-        </v-card-title>
+  <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown" dark>
+
+    <v-timeline-item color="#8b008b" icon="mdi-application-brackets-outline" fill-dot>
+      <v-card :color="black" dark>
+        <v-card-title class="text-h6">August 2022: Portfolio Website</v-card-title>
         <v-card-text class="white text--primary">
-          <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
-          <v-btn
-            color="#8b008b"
-            class="mx-0"
-            outlined
-          >
-            Button
-          </v-btn>
+          <p>This website shows the tools which I can work with and my last projects.</p>
+          <br/>
+          <v-btn color="#8b008b" class="btn" outlined href="https://github.com/JanNiclasRuppenthal/PortfolioWebsite" target="_blank">Show Repository </v-btn>
         </v-card-text>
       </v-card>
     </v-timeline-item>
+
+    <v-timeline-item color="#8b008b" icon="mdi-cellphone" fill-dot>
+      <v-card :color="black" dark>
+        <v-card-title class="text-h6">September 2021: CreARtion</v-card-title>
+        <v-card-text class="white text--primary">
+          <p>CreARtion is an Android App which has not been officially published on the Google PlayStore yet. In this App you can transform objects into sculptures in Augmented Reality. <br/>
+          It was developed as part of a module called "Kleines Studienprojekt" at University Trier.</p>
+          <br/>
+          <v-btn color="#8b008b" class="btn" outlined href="https://github.com/JanNiclasRuppenthal/CreARtion" target="_blank">Show Repository </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-timeline-item>
+
+        <v-timeline-item color="#8b008b" icon="mdi-certificate" fill-dot>
+      <v-card :color="black" dark>
+        <v-card-title class="text-h6">March 2019: Abitur</v-card-title>
+        <v-card-text class="white text--primary">
+          <p>Achieved the general qualification for university entrance.</p>
+        </v-card-text>
+      </v-card>
+    </v-timeline-item>
+
+        <v-timeline-item color="#8b008b" icon="mdi-baby-face-outline" fill-dot>
+      <v-card :color="black" dark>
+        <v-card-title class="text-h6">November 1999: Birthdate</v-card-title>
+        <v-card-text class="white text--primary">
+          <p>System.out.println("Hello World!")</p>
+        </v-card-text>
+      </v-card>
+    </v-timeline-item>
+
+
   </v-timeline>
 </template>
 
 </div>
-
-
 </template>
 
 
