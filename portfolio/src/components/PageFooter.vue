@@ -1,8 +1,18 @@
 <template>
     <div class="root">
         <v-divider class="dividerFooter"/>
-        <p>Impressum</p>
-        <p>Datenschutzerklärung</p>
+
+        <router-link class="link" to="/impressum">
+            <p>Impressum</p>
+            </router-link>
+            
+        <br/>
+
+        <router-link class="link" to="/datenschutzerklaerung">
+            <p>Datenschutzerklärung</p>
+        </router-link>
+        <router-view/>
+
     </div>
 </template>
 
@@ -12,10 +22,6 @@
 
 
 <style>
-.timeline {
-  text-align: left;
-}
-
 .dividerFooter {
     border-color: aqua !important;
     margin-top: 20%;

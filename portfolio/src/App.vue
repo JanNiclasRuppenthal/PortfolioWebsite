@@ -31,6 +31,7 @@
       <PageFooter/>
     </section>
   </div>
+
 </div>
 </template>
 
@@ -40,7 +41,6 @@ import MyTools from './components/MyTools.vue';
 import MyTimeline from './components/MyTimeline.vue';
 import ContactMe from './components/ContactMe.vue';
 import PageFooter from './components/PageFooter.vue';
-
 
 
 export default {
@@ -107,16 +107,4 @@ section {
 .distance {
   padding-top: 20%;
 }
-
-.reveal{
-  position: relative;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-
 </style>
