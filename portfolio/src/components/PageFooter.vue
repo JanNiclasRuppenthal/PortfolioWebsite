@@ -5,13 +5,14 @@
         <router-link class="link" to="/impressum">
             <p>Impressum</p>
             </router-link>
-            
+
         <br/>
 
         <router-link class="link" to="/datenschutzerklaerung">
             <p>Datenschutzerklärung</p>
         </router-link>
-        <router-view/>
+
+    
 
     </div>
 </template>

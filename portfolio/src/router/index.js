@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from '../App.vue'
+import App from '../views/HomeView.vue'
 
 import Datenschutzerklaerung from '../components/TheDatenschutzerklaerung.vue'
 import Impressum from '../components/TheImpressum.vue'

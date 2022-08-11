@@ -4,7 +4,7 @@
   <v-divider class="divider"></v-divider>
 
   <template>
-  <v-timeline align-left :dense="$vuetify.breakpoint.smAndDown" dark>
+  <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown" dark>
 
     <v-timeline-item color="#8b008b" icon="mdi-application-brackets-outline" fill-dot>
       <v-card :color="black" dark>
