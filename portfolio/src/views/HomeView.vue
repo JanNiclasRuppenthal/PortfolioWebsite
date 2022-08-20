@@ -20,11 +20,11 @@
     </section>
   </div>
 
-  <div class="distance">
+  <!--div class="distance">
     <section class="reveal">
       <ContactMe/>
     </section>
-  </div>
+  </div-->
   
   <div class="distance2">
     <section class="reveal active">
@@ -39,7 +39,7 @@
 import Header from '../components/Header.vue';
 import MyTools from '../components/MyTools.vue';
 import MyTimeline from '../components/MyTimeline.vue';
-import ContactMe from '../components/ContactMe.vue';
+//import ContactMe from '../components/ContactMe.vue';
 import PageFooter from '../components/PageFooter.vue';
 
 
@@ -49,7 +49,7 @@ export default {
     Header,
     MyTools,
     MyTimeline,
-    ContactMe,
+    //ContactMe,
     PageFooter
 },
 
