@@ -17,11 +17,25 @@
     </div>
 
     
-    <div class="content2"><h1>Impressum</h1></div>
+    <div class="content2">
+      <h1>Impressum</h1>
+      <p>Angaben gemäß § 5 TMG</p>
+      <p>Jan Niclas Ruppenthal<br> 
+          Hochwaldstraße, 6<br> 
+          55767 Niederhambach<br> 
+      </p>
+      <p> <strong>Vertreten durch: </strong><br>
+          Jan Niclas Ruppenthal<br>
+      </p>
+      <p><strong>Kontakt:</strong> <br>
+          Telefon: 0171 2391748<br>
+          E-Mail: <a href="mailto:jan.rupp06@web.de">jan.rupp06@web.de</a><br>
+      </p>
+      <div class="generator">
+        Website Impressum erstellt durch <a href="https://www.impressum-generator.de">impressum-generator.de</a> von der <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Kanzlei Hasselbach</a>
+      </div>
+    </div>
     
-    
-
-
   </div>
 </template>
 
@@ -43,5 +57,8 @@
     align-self: center;
 }
 
+.generator {
+  padding-top: 10%;
+}
 
 </style>
