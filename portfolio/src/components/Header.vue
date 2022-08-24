@@ -2,6 +2,7 @@
 
 <div class="root">
     <div class="header">
+
         <!-- I need a logo somehow....-->
         <h1 class="logo">JNR</h1>
 
@@ -10,9 +11,9 @@
 
         <div class="icons">
             <!-- Add font awesome icons -->
-            <a href="#" class="fa fa-instagram fa-2x"></a>
-            <a href="#" class="fa fa-twitter fa-2x"></a>
-            <a href="#" class="fa fa-github fa-2x"></a>
+            <a href="https://www.instagram.com/stubbi06/" class="fa fa-instagram fa-2x"></a>
+            <a href="https://twitter.com/Stubbi_33/" class="fa fa-twitter fa-2x"></a>
+            <a href="https://github.com/JanNiclasRuppenthal" class="fa fa-github fa-2x"></a>
         </div>
     </div>
         <div class="content">
@@ -58,14 +59,13 @@ export default {
 }
 
 .logo {
-
     margin-left: auto;
     text-align: left;
-    font-size: 200%;
+    font-size: 400%;
 }
 
 .fa {
-  padding: 10%;
+  padding: 30%;
   width: 20px;
   text-align: center;
   text-decoration: none;
