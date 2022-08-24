@@ -1,4 +1,5 @@
 <template>
+
 <div class="root">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+
 
 
 export default {
@@ -47,18 +49,22 @@ beforeMount() {
 </script>
 
 <style>
+
 #app, body {
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
+
   background-color: #121212ee;
   margin-top: 5%;
   min-height: 100%;
 
   margin-left: 5%;
   margin-right: 5%;
+
   
 }
 
@@ -84,4 +90,5 @@ section {
   transform: translateY(0);
   opacity: 1;
 }
+
 </style>

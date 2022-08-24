@@ -1,4 +1,5 @@
 <template>
+
 <div class="root">
     <div class="header">
         <!-- I need a logo somehow....-->
@@ -31,6 +32,7 @@
 
 
 </div>
+
 </template>
 
 <script>
@@ -48,12 +50,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
   color: #ffffff;
   background-color: #121212ee;
+
   margin-top: 60px;
 }
 
 .logo {
+
     margin-left: auto;
     text-align: left;
     font-size: 200%;
@@ -66,7 +71,8 @@ export default {
   text-decoration: none;
   border-radius: 100%;
   color: aqua;
-  margin-right: 100%;
+
+
 }
 
 .header{
@@ -78,6 +84,7 @@ export default {
     top: 0px;
     left: 0px;
 }
+
 
  .header .icons {
     position: absolute;
