@@ -1,5 +1,4 @@
 <template>
-
 <div class="root">
     <div class="header">
 
@@ -11,9 +10,9 @@
 
         <div class="icons">
             <!-- Add font awesome icons -->
-            <a href="https://www.instagram.com/stubbi06/" class="fa fa-instagram fa-2x"></a>
-            <a href="https://twitter.com/Stubbi_33/" class="fa fa-twitter fa-2x"></a>
-            <a href="https://github.com/JanNiclasRuppenthal" class="fa fa-github fa-2x"></a>
+            <a href="https://www.instagram.com/stubbi06/"  target=”_blank” class="fa fa-instagram fa-2x"/>
+            <a href="https://twitter.com/Stubbi_33/"  target=”_blank” class="fa fa-twitter fa-2x"/>
+            <a href="https://github.com/JanNiclasRuppenthal"  target=”_blank” class="fa fa-github fa-2x"/>
         </div>
     </div>
         <div class="content">
@@ -30,7 +29,6 @@
         <v-subheader class="subheader">Scroll/Swipe down to learn more about me.</v-subheader>
         <v-divider class="divider" light="true"/>
     </div>
-
 
 </div>
 
@@ -65,7 +63,7 @@ export default {
 }
 
 .fa {
-  padding: 30%;
+  margin: 20%;
   width: 20px;
   text-align: center;
   text-decoration: none;
@@ -87,15 +85,16 @@ export default {
 
 
  .header .icons {
-    position: absolute;
     top: 0%;
     right: 0%;
+    margin-left: 90%;
     margin-right: 5%;
+    padding-bottom: 0%;
 }
 
 .content {
     position: relative;
-    padding-top: 200px;
+    padding-top: 150px;
     align-self: center;
     text-align: left;
 }
