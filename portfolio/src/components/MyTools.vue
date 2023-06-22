@@ -14,17 +14,16 @@
         <v-img max-width="250" max-height="200"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
-          <v-btn text color="#8b008b" @click="revealJava = true">Learn More</v-btn>
+          <v-btn outlined color="#FF5722" @click="revealJava = true">Learn More</v-btn>
         </v-card-actions>
 
         <v-expand-transition>
           <v-card v-if="revealJava" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;" color="#000000">
             <v-card-text class="pb-0">
-              <p>At the beginning of my studies in 2019 I began to learn the programming language Java. Throghout the years I learned to love this programming language. I like the class-based and object-oriented implementation. <br/>
-              "Write once, run erverywhere".</p>
+              <p>At the beginning of my studies in 2019 I began to learn the programming language Java. Throghout the years I learned to love this programming language. I like the class-based and object-oriented implementation.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
-              <v-btn text color="#8b008b" @click="revealJava = false" >Close</v-btn>
+              <v-btn outlined color="#FF5722" @click="revealJava = false" >Close</v-btn>
             </v-card-actions>
           </v-card>
         </v-expand-transition>
@@ -39,7 +38,7 @@
         <v-img max-width="250" max-height="146"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
-          <v-btn text color="#8b008b" @click="revealCSharp = true">Learn More</v-btn>
+          <v-btn outlined color="#FF5722" @click="revealCSharp = true">Learn More</v-btn>
         </v-card-actions>
 
         <v-expand-transition>
@@ -48,7 +47,7 @@
               <p>C# is the first programming language which I learned through a book on my own. The reason why I chose this language is because I wanted to program video games and C# is similar to Java.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
-              <v-btn text color="#8b008b" @click="revealCSharp = false" >Close</v-btn>
+              <v-btn outlined color="#FF5722" @click="revealCSharp = false" >Close</v-btn>
             </v-card-actions>
           </v-card>
         </v-expand-transition>
@@ -64,7 +63,7 @@
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
           <v-spanner></v-spanner>
-          <v-btn text color="#8b008b" @click="revealPython = true">Learn More</v-btn>
+          <v-btn outlined color="#FF5722" @click="revealPython = true">Learn More</v-btn>
         </v-card-actions>
 
         <v-expand-transition>
@@ -73,7 +72,7 @@
               <p>With Python I made my first steps in the programming world. In 2016/2017 I learned the basic concepts of coding with Python. It is not my favourite language because it is not a strictly typed language.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
-              <v-btn text color="#8b008b" @click="revealPython = false" >Close</v-btn>
+              <v-btn outlined color="#FF5722" @click="revealPython = false" >Close</v-btn>
             </v-card-actions>
           </v-card>
         </v-expand-transition>
@@ -88,7 +87,7 @@
         <v-img max-width="250" max-height="200"></v-img>
         <v-card-actions>
           <!-- Should I change that for mobile devices?? -->
-          <v-btn text color="#8b008b" @click="revealUnity = true">Learn More</v-btn>
+          <v-btn outlined color="#FF5722" @click="revealUnity = true">Learn More</v-btn>
         </v-card-actions>
 
         <v-expand-transition>
@@ -97,7 +96,7 @@
               <p>Back in 2021, I started to learn to program software in the Unity Engine through a book with a lot of tutorials. I wanted to program video games in Unity because the engine is popular and it is a cross-plattform game-engine.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
-              <v-btn text color="#8b008b" @click="revealUnity = false" >Close</v-btn>
+              <v-btn outlined color="#FF5722" @click="revealUnity = false" >Close</v-btn>
             </v-card-actions>
           </v-card>
         </v-expand-transition>
