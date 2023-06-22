@@ -10,7 +10,7 @@
 
         <div class="icons">
             <!-- Add font awesome icons -->
-            <a href="https://www.instagram.com/stubbi06/"  target=”_blank” class="fa fa-instagram fa-2x"/>
+            <a href="https://www.instagram.com/stubbi_33/"  target=”_blank” class="fa fa-instagram fa-2x"/>
             <a href="https://twitter.com/Stubbi_33/"  target=”_blank” class="fa fa-twitter fa-2x"/>
             <a href="https://github.com/JanNiclasRuppenthal"  target=”_blank” class="fa fa-github fa-2x"/>
         </div>
@@ -19,7 +19,7 @@
             <h3>Hey, my name is</h3>
             <h1>Jan Niclas Ruppenthal</h1>
             <p>
-                I'm a 22 year-old student from University of Trier
+                I'm a {{ age }} year-old student from University of Trier
                 who is fascinated by soft- and hardware. <br/>
                 My main goal is to be a Software Developer. 
             </p>
@@ -39,8 +39,32 @@
 export default {
   name: 'App',
   components: {
+  },
+  data() {
+    return {
+      birthDate: '1999-11-06',
+      age: 0
+    };
+  },
+  created() {
+    this.calculateAge();
+  },
+  methods: {
+    calculateAge() {
+      const currentDate = new Date();
+      const birthDate = new Date(this.birthDate);
+      const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+      const currentMonth = currentDate.getMonth();
+      const birthMonth = birthDate.getMonth();
+      if (currentMonth < birthMonth || (currentMonth === birthMonth && currentDate.getDate() < birthDate.getDate())) {
+        this.age = age - 1;
+      } else {
+        this.age = age;
+      }
+    }
   }
-}
+};
 </script>
 
 <style>
