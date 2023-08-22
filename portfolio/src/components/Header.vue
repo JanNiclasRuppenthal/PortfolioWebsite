@@ -8,11 +8,20 @@
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <div class="icons">
+        <div class="icon-container">
             <!-- Add font awesome icons -->
-            <a href="https://www.instagram.com/stubbi_33/"  target=”_blank” class="fa fa-instagram fa-2x"/>
-            <a href="https://twitter.com/Stubbi_33/"  target=”_blank” class="fa fa-twitter fa-2x"/>
-            <a href="https://github.com/JanNiclasRuppenthal"  target=”_blank” class="fa fa-github fa-2x"/>
+            <a href="https://github.com/JanNiclasRuppenthal"  target=”_blank” class="faicons">
+              <i class="fab fa-github fa-2x"/>
+            </a>  
+            <a href="https://www.instagram.com/stubbi_33/"  target=”_blank” class="faicons">
+              <i class="fab fa-instagram fa-2x"/>
+            </a>
+            <a href="https://www.linkedin.com/in/jan-niclas-ruppenthal-27369a289/" target="_blank" class="faicons">
+              <i class="fab fa-linkedin fa-2x"/>
+            </a>
+            <a href="https://X.com/Stubbi_33/"  target=”_blank” class="faicons">
+              <i class="fab fa-x-twitter fa-2x"/>
+            </a>
         </div>
     </div>
         <div class="content">
@@ -86,15 +95,24 @@ export default {
     font-size: 400%;
 }
 
-.fa {
-  margin: 20%;
-  width: 20px;
+.icon-container {
+  display: flex;
+  flex-direction: column; /* Display icons vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.faicons {
+  width: 20%;
+  margin: 10px; /* Set vertical margin (10px top and bottom, 0px left and right) */
+  margin-left: auto;
   text-align: center;
   text-decoration: none;
   border-radius: 100%;
   color: aqua;
+}
 
-
+.faicons:hover {
+  color: #ffffff;
 }
 
 .header{
