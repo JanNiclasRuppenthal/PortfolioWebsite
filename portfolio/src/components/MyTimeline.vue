@@ -10,7 +10,7 @@
 
     <v-timeline-item  color="orange" icon="mdi-certificate" fill-dot>
       <v-card color="black" dark>
-        <v-card-title class="text-h6">June 2023: Bachelor of Science</v-card-title>
+        <v-card-title class="text-h6">March 2023: Bachelor of Science</v-card-title>
         <v-card-text class="text--primary">
           <p>Bachelor of Science in Computer Science: A broad range of knowledge and skills in computer science, programming, and information technology systems, enabling them to analyze complex problems, develop software, and design technical solutions for various industries.</p>
         </v-card-text>
