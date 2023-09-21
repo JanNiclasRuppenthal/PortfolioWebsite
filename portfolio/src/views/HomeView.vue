@@ -88,7 +88,7 @@ beforeMount() {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  background-color: #121212ee;
+  background-color: #333333;
   margin-top: 5%;
   min-height: 100%;
 
