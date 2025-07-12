@@ -19,18 +19,15 @@
             <a href="https://www.linkedin.com/in/jan-niclas-ruppenthal-27369a289/" target="_blank" class="faicons">
               <i class="fab fa-linkedin fa-2x"/>
             </a>
-            <a href="https://X.com/Stubbi_33/"  target=”_blank” class="faicons">
-              <i class="fab fa-x-twitter fa-2x"/>
-            </a>
         </div>
     </div>
         <div class="content">
             <h3>Hey, my name is</h3>
             <h1>Jan Niclas Ruppenthal</h1>
             <p>
-                I'm a {{ age }} year-old student from University of Trier
-                who is fascinated by soft- and hardware. <br/>
-                My main goal is to be a Software Developer. 
+                I'm a {{ age }} year-old PhD student at the Trier University
+                who is fascinated by both software and hardware. <br/>
+                My main goal is to earn my doctoral degree and contribute to advancing knowledge in my field.
             </p>
         </div>
 

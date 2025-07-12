@@ -13,14 +13,13 @@
         </v-card-text>
         <v-img max-width="250" max-height="200"></v-img>
         <v-card-actions>
-          <!-- Should I change that for mobile devices?? -->
           <v-btn outlined color="#FF5722" @click="revealJava = true">Learn More</v-btn>
         </v-card-actions>
 
         <v-expand-transition>
           <v-card v-if="revealJava" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;" color="#000000">
             <v-card-text class="pb-0">
-              <p>At the beginning of my studies in 2019 I began to learn the programming language Java. Throghout the years I learned to love this programming language. I like the class-based and object-oriented implementation.</p>
+              <p>At the beginning of my studies in 2019 I began to learn the programming language Java. Throughout the years I learned to love this programming language. I like the class-based and object-oriented implementation.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
               <v-btn outlined color="#FF5722" @click="revealJava = false" >Close</v-btn>
@@ -37,7 +36,6 @@
         </v-card-text>
         <v-img max-width="250" max-height="146"></v-img>
         <v-card-actions>
-          <!-- Should I change that for mobile devices?? -->
           <v-btn outlined color="#FF5722" @click="revealCSharp = true">Learn More</v-btn>
         </v-card-actions>
 
@@ -61,7 +59,6 @@
         </v-card-text>
         <v-img max-width="250" max-height="145"></v-img>
         <v-card-actions>
-          <!-- Should I change that for mobile devices?? -->
           <v-spanner></v-spanner>
           <v-btn outlined color="#FF5722" @click="revealPython = true">Learn More</v-btn>
         </v-card-actions>
@@ -69,7 +66,7 @@
         <v-expand-transition>
           <v-card v-if="revealPython" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;" color="#000000">
             <v-card-text class="pb-0">
-              <p>With Python I made my first steps in the programming world. In 2016/2017 I learned the basic concepts of coding with Python. It is not my favourite language because it is not a strictly typed language.</p>
+              <p>With Python I made my first steps in the programming world. In 2016/2017 I learned the basic concepts of coding with Python. It is not my favorite language because it is not a strictly typed language.</p>
             </v-card-text>
             <v-card-actions class="pt-0">
               <v-btn outlined color="#FF5722" @click="revealPython = false" >Close</v-btn>
@@ -100,7 +97,54 @@
             </v-card-actions>
           </v-card>
         </v-expand-transition>
-      </v-card>  
+      </v-card>
+
+      <v-card  class="GitHub mx-auto" @mouseover="revealGitHub = true" @mouseleave="revealGitHub = false"
+        min-width="250" height="250" color="#000000">
+        <v-card-text>
+          <h1 class="title">GitHub</h1>
+        </v-card-text>
+        <v-img max-width="250" max-height="140"></v-img>
+        <v-card-actions>
+          <v-btn outlined color="#FF5722" @click="revealGitHub = true">Learn More</v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <v-card v-if="revealGitHub" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;" color="#000000">
+            <v-card-text class="pb-0">
+              <p>I use GitHub extensively for version control to manage and track changes in my projects. It helps me collaborate efficiently and maintain a clear history of my code development.
+              </p>
+            </v-card-text>
+            <v-card-actions class="pt-0">
+              <v-btn outlined color="#FF5722" @click="revealGitHub = false" >Close</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-expand-transition>
+      </v-card>
+
+      <v-card  class="Notes mx-auto" @mouseover="revealNotes = true" @mouseleave="revealNotes = false"
+        min-width="250" height="250" color="#000000">
+        <v-card-text>
+          <h1 class="title">Note-taking</h1>
+        </v-card-text>
+        <v-img max-width="250" max-height="140"></v-img>
+        <v-card-actions>
+          <v-btn outlined color="#FF5722" @click="revealNotes = true">Learn More</v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <v-card v-if="revealNotes" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%;" color="#000000">
+            <v-card-text class="pb-0">
+              <p>
+                I use Notion alongside handwritten notes on my tablet to capture and organize all relevant information. Combining digital tools and manual input helps me stay flexible, efficient, and well-organized in my work.
+              </p>
+            </v-card-text>
+            <v-card-actions class="pt-0">
+              <v-btn outlined color="#FF5722" @click="revealNotes = false" >Close</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-expand-transition>
+      </v-card>
 
 
   </div>
@@ -117,6 +161,8 @@
       revealCSharp: false,
       revealPython: false,
       revealUnity: false,
+      revealGitHub: false,
+      revealNotes: false,
     }),
   }
 </script>
@@ -152,11 +198,17 @@ p {
   margin-right: 5%;
 }
 
-
 .Python {
   margin-right: 5%;
 }
 
+.UnityEngine {
+  margin-right: 5%;
+}
+
+.GitHub {
+  margin-right: 5%;
+}
 
 
 .title{
