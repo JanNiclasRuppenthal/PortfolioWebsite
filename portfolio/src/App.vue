@@ -335,6 +335,7 @@ h2 {
 .tool-main {
   text-align: center;
   transition: transform 0.25s ease, opacity 0.25s ease;
+  margin-top: 1rem;
 }
 
 .tool-card img {
