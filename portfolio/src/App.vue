@@ -1,195 +1,52 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import AboutSection from './components/AboutSection.vue'
+import ToolkitSection from './components/ToolkitSection.vue'
+import TimelineSection from './components/TimelineSection.vue'
+import SocialsSection from './components/SocialsSection.vue'
 
-type Tool = {
-  name: string
-  logo: string
-  alt: string
-  why: string
-}
-
-type ToolGroup = {
-  title: string
-  items: Tool[]
-}
-
-type TimelineEntry = {
-  date: string
-  title: string
-  description: string
-  icon: string
-  iconAlt: string
-  imageLabel?: string
-}
-
-const socialLinks = [
-  {
-    name: 'Bluesky',
-    href: 'https://bsky.app/profile/your-handle.bsky.social',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/bluesky.svg',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/JanNiclasRuppenthal',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/github.svg',
-  },
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/jan-niclas-ruppenthal-27369a289/',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/linkedin.svg',
-  },
-  {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/stubbi_33/',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/instagram.svg',
-  },
-]
-
-const toolGroups: ToolGroup[] = [
-  {
-    title: 'Programming Languages',
-    items: [
-      {
-        name: 'Java',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        alt: 'Java logo',
-        why: 'For structured, object-oriented systems and reliable backend logic.',
-      },
-      {
-        name: 'C#',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-        alt: 'C sharp logo',
-        why: 'For clean desktop/game workflows and strongly typed architecture.',
-      },
-      {
-        name: 'Python',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        alt: 'Python logo',
-        why: 'For rapid prototyping, scripting, and research-focused experiments.',
-      },
-    ],
-  },
-  {
-    title: 'Dev Tools & Platforms',
-    items: [
-      {
-        name: 'Unity',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
-        alt: 'Unity logo',
-        why: 'For interactive 3D and AR experiences that combine logic and creativity.',
-      },
-      {
-        name: 'Notion',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg',
-        alt: 'Notion logo',
-        why: 'For keeping ideas, tasks, and project notes organized and actionable.',
-      },
-      {
-        name: 'Git / GitHub',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-        alt: 'GitHub logo',
-        why: 'For version control, collaboration, and documenting project progress.',
-      },
-    ],
-  },
-]
-
-const timeline: TimelineEntry[] = [
-  {
-    date: 'July 2025',
-    title: 'Started My PhD Journey',
-    description:
-      'I began my PhD in computer science, focusing on software engineering and augmented reality. I am learning how to ask better research questions and turn ideas into concrete outcomes.',
-    icon: 'https://api.iconify.design/mdi/school-outline.svg',
-    iconAlt: 'Education icon',
-    imageLabel: 'Publication or lab screenshot',
-  },
-  {
-    date: 'May 2025',
-    title: 'Master of Science Completed',
-    description:
-      'I finished my M.Sc. in computer science. This stage sharpened my thinking around clean architecture and practical problem-solving in real projects.',
-    icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
-    iconAlt: 'Certificate icon',
-  },
-  {
-    date: 'September 2021',
-    title: 'Released CreARtion on Android',
-    description:
-      'I built and published an AR app on the Play Store. It taught me how much polish, testing, and iteration matter when moving from prototype to public release.',
-    icon: 'https://api.iconify.design/mdi/cellphone.svg',
-    iconAlt: 'Mobile app icon',
-    imageLabel: 'App screenshot placeholder',
-  },
-  {
-    date: 'August 2022',
-    title: 'Built My First Portfolio Website',
-    description:
-      'I created my first personal website to document projects and progress. It was not perfect, but it gave me a place to share what I build and how I think.',
-    icon: 'https://api.iconify.design/mdi/web.svg',
-    iconAlt: 'Website icon',
-    imageLabel: 'Project preview placeholder',
-  },
-]
-
-let observer: IntersectionObserver | null = null
-let sectionObserver: IntersectionObserver | null = null
 const activeSection = ref('about')
 const currentYear = new Date().getFullYear()
 
+let revealObserver: IntersectionObserver | null = null
+let scrollObserver: IntersectionObserver | null = null
+
 onMounted(() => {
   const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]')
-  const trackedSections = document.querySelectorAll<HTMLElement>('main section[id]')
+  const sections = document.querySelectorAll<HTMLElement>('main section[id]')
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  if (prefersReducedMotion) {
-    revealElements.forEach((element) => element.classList.add('is-visible'))
-  } else {
-    observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return
-          entry.target.classList.add('is-visible')
-          observer?.unobserve(entry.target)
-        })
-      },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -8% 0px',
-      },
-    )
-
-    revealElements.forEach((element) => observer?.observe(element))
-  }
-
-  sectionObserver = new IntersectionObserver(
-    (entries) => {
-      let mostVisibleId = activeSection.value
-      let highestRatio = 0
-
+  // 1. Reveal Animations Observer
+  if (!prefersReducedMotion) {
+    revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return
-        const sectionId = (entry.target as HTMLElement).id
-        if (entry.intersectionRatio > highestRatio) {
-          highestRatio = entry.intersectionRatio
-          mostVisibleId = sectionId
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          revealObserver?.unobserve(entry.target)
         }
       })
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' })
 
-      activeSection.value = mostVisibleId
-    },
-    {
-      threshold: [0.2, 0.35, 0.5, 0.7],
-      rootMargin: '-25% 0px -35% 0px',
-    },
-  )
+    revealElements.forEach((el) => revealObserver?.observe(el))
+  } else {
+    revealElements.forEach((el) => el.classList.add('is-visible'))
+  }
 
-  trackedSections.forEach((section) => sectionObserver?.observe(section))
+  // 2. Active Section Scroll Observer
+  scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+        activeSection.value = entry.target.id
+      }
+    })
+  }, { threshold: [0.2, 0.5, 0.8], rootMargin: '-20% 0px -20% 0px' })
+
+  sections.forEach((s) => scrollObserver?.observe(s))
 })
 
 onBeforeUnmount(() => {
-  observer?.disconnect()
-  sectionObserver?.disconnect()
+  revealObserver?.disconnect()
+  scrollObserver?.disconnect()
 })
 </script>
 
@@ -206,90 +63,15 @@ onBeforeUnmount(() => {
     </header>
 
     <main>
-      <section id="about" class="section about reveal" data-reveal>
-        <div class="about-photo" aria-label="Profile photo placeholder">
-          <span>Photo</span>
-        </div>
-        <div class="about-content">
-          <p class="eyebrow">Hello, my name is</p>
-          <h1 class="name-title">Jan Niclas Ruppenthal</h1>
-          <div class="about-highlight">
-            <p class="lead">
-              I enjoy learning by building, breaking, and improving. My focus is on solving problems in
-              a way that is practical, readable, and useful for real people.
-            </p>
-            <p>
-              I like exploring different technologies, from the logic and structure of Java to the
-              creative side of Unity. Every project teaches me something new, and that is what keeps me
-              motivated.
-            </p>
-          </div>
-          <div class="about-actions">
-            <a class="btn btn-primary" href="mailto:janniclas99.jnr@gmail.com">Contact me</a>
-            <a class="btn btn-secondary" href="/cv.pdf" target="_blank" rel="noreferrer noopener">
-              Download CV
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="tools" class="section reveal reveal-delay-1" data-reveal>
-        <p class="eyebrow">Tools I use to bring ideas to life.</p>
-        <h2>My Toolkit</h2>
-        <div class="tool-sections">
-          <section v-for="group in toolGroups" :key="group.title" class="tool-section">
-            <h3 class="group-title">{{ group.title }}</h3>
-            <div class="tool-grid">
-              <article v-for="tool in group.items" :key="tool.name" class="tool-card">
-                <div class="tool-main">
-                  <img :src="tool.logo" :alt="tool.alt" />
-                  <h4>{{ tool.name }}</h4>
-                </div>
-                <p class="tool-why">{{ tool.why }}</p>
-              </article>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <section id="timeline" class="section reveal reveal-delay-2" data-reveal>
-        <h2>Journey &amp; Milestones</h2>
-        <div class="timeline">
-          <article v-for="entry in timeline" :key="entry.date + entry.title" class="timeline-entry">
-            <div class="timeline-point" aria-hidden="true">
-              <img :src="entry.icon" :alt="entry.iconAlt" />
-            </div>
-            <div class="timeline-content">
-              <p class="timeline-date">{{ entry.date }}</p>
-              <h3>{{ entry.title }}</h3>
-              <p>{{ entry.description }}</p>
-              <div v-if="entry.imageLabel" class="timeline-image">
-                {{ entry.imageLabel }}
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="socials" class="section reveal reveal-delay-2" data-reveal>
-        <p class="eyebrow">Let us connect.</p>
-        <h2>Social Media</h2>
-        <div class="social-card-grid">
-          <a
-            v-for="item in socialLinks"
-            :key="'card-' + item.name"
-            class="social-card"
-            :href="item.href"
-            :aria-label="item.name"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img :src="item.icon" :alt="item.name + ' logo'" />
-            <h4>{{ item.name }}</h4>
-          </a>
-        </div>
-      </section>
+      <AboutSection id="about" />
+      <ToolkitSection id="tools" />
+      <TimelineSection id="timeline" />
+      <SocialsSection id="socials" />
     </main>
-    <footer class="site-footer">© {{ currentYear }} Jan Niclas Ruppenthal. <span>Built with Vue.</span></footer>
+
+    <footer class="site-footer">
+      © {{ currentYear }} Jan Niclas Ruppenthal. <span>Built with Vue.</span>
+    </footer>
   </div>
 </template>
 
