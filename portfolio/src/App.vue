@@ -281,16 +281,19 @@ h2 {
   background: rgba(167, 139, 250, 0.24);
 }
 
-.btn-secondary {
+.btn-timeline {
   background: rgba(167, 139, 250, 0.16);
   color: var(--accent-purple-soft);
   border-color: rgba(167, 139, 250, 0.5);
+  display: flex; /* Or block */
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content; /* Keeps the button from stretching to full width */
+  margin-top: 1.5rem;
 }
 
-.btn-secondary:hover {
+.btn-timeline:hover {
   background: rgba(167, 139, 250, 0.24);
-  border-color: rgba(167, 139, 250, 0.65);
-  color: #f3f0ff;
 }
 
 .tool-sections {
@@ -410,7 +413,7 @@ h2 {
 
 .timeline {
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   padding-left: 2.8rem;
 }
 
@@ -426,7 +429,8 @@ h2 {
 
 .timeline-entry {
   position: relative;
-  margin-bottom: 1.7rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .timeline-point {
@@ -484,10 +488,25 @@ h2 {
   border: 1px dashed #71717a;
   border-radius: 12px;
   min-height: 115px;
+  height: 400px;
   display: grid;
   place-items: center;
   color: #a1a1aa;
   font-size: 0.85rem;
+  overflow: hidden;
+
+  /* ADD THESE THREE LINES TO CENTER THE CONTENT */
+  display: flex;
+  align-items: center;     /* Vertical centering */
+  justify-content: center;  /* Horizontal centering */
+}
+
+.timeline-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  display: block;
 }
 
 .site-footer {

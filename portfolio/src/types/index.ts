@@ -16,7 +16,10 @@ export type TimelineEntry = {
   description: string
   icon: string
   iconAlt: string
+  imageSrc?: string
   imageLabel?: string
+  link?: string
+  linkLabel?: string
 }
 
 export type SocialLink = {
