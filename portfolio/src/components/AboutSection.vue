@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="about-actions">
-        <a class="btn btn-primary" href="mailto:janniclas99.jnr@gmail.com">Contact me</a>
+        <a class="btn btn-primary" href="mailto:">Contact me</a>
         <a class="btn btn-primary" href="/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">
           Download CV
         </a>
