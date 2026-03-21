@@ -500,6 +500,12 @@ h2 {
   display: flex;
   align-items: center;     /* Vertical centering */
   justify-content: center;  /* Horizontal centering */
+
+  /* CRITICAL: This restricts all absolute children (like the overlay) 
+     to STAY inside this box only */
+  position: relative; 
+  overflow: hidden; 
+  cursor: zoom-in;
 }
 
 .timeline-photo {

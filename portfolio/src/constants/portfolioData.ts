@@ -97,7 +97,7 @@ export const timeline: TimelineEntry[] = [
     icon: 'https://api.iconify.design/mdi/paper.svg',
     iconAlt: 'Paper icon',
     imageSrc: './EcoDivePreview.png',
-    imageLabel: 'Screenshot of the EcoDive VR experience: Seeing the clean ocean under water.',
+    imageLabel: 'Screenshot of the EcoDive VR experience: Seeing the difference between the clean and polluted ocean under water.',
     link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
     linkLabel: 'View Publication'
   },
