@@ -5,7 +5,6 @@ import ToolkitSection from './components/ToolkitSection.vue'
 import TimelineSection from './components/TimelineSection.vue'
 import SocialsSection from './components/SocialsSection.vue'
 
-const activeSection = ref('about')
 const currentYear = new Date().getFullYear()
 
 let revealObserver: IntersectionObserver | null = null
@@ -13,7 +12,6 @@ let scrollObserver: IntersectionObserver | null = null
 
 onMounted(() => {
   const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]')
-  const sections = document.querySelectorAll<HTMLElement>('main section[id]')
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   // 1. Reveal Animations Observer
@@ -31,22 +29,10 @@ onMounted(() => {
   } else {
     revealElements.forEach((el) => el.classList.add('is-visible'))
   }
-
-  // 2. Active Section Scroll Observer
-  scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-        activeSection.value = entry.target.id
-      }
-    })
-  }, { threshold: [0.2, 0.5, 0.8], rootMargin: '-20% 0px -20% 0px' })
-
-  sections.forEach((s) => scrollObserver?.observe(s))
 })
 
 onBeforeUnmount(() => {
   revealObserver?.disconnect()
-  scrollObserver?.disconnect()
 })
 </script>
 
@@ -55,10 +41,10 @@ onBeforeUnmount(() => {
     <header class="site-header">
       <div class="brand">JNR#33</div>
       <nav class="site-nav">
-        <a href="#about" :class="{ active: activeSection === 'about' }">About</a>
-        <a href="#tools" :class="{ active: activeSection === 'tools' }">Tools</a>
-        <a href="#timeline" :class="{ active: activeSection === 'timeline' }">Timeline</a>
-        <a href="#socials" :class="{ active: activeSection === 'socials' }">Socials</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#socials">Socials</a>
       </nav>
     </header>
 
@@ -140,14 +126,6 @@ body {
 
 .site-nav a:hover {
   color: var(--accent-sky-soft);
-}
-
-.site-nav a.active {
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(125, 211, 252, 0.24);
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  text-decoration-color: var(--accent-sky);
 }
 
 .section {
@@ -316,7 +294,7 @@ h2 {
 
 .social-card-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -495,14 +473,9 @@ h2 {
   color: #a1a1aa;
   font-size: 0.85rem;
   overflow: hidden;
-
-  /* ADD THESE THREE LINES TO CENTER THE CONTENT */
   display: flex;
-  align-items: center;     /* Vertical centering */
-  justify-content: center;  /* Horizontal centering */
-
-  /* CRITICAL: This restricts all absolute children (like the overlay) 
-     to STAY inside this box only */
+  align-items: center;
+  justify-content: center;
   position: relative; 
   overflow: hidden; 
   cursor: zoom-in;

@@ -1,28 +1,5 @@
 import type { SocialLink, ToolGroup, TimelineEntry } from '../types'
 
-export const socialLinks: SocialLink[]  = [
-  {
-    name: 'Bluesky',
-    href: 'https://bsky.app/profile/your-handle.bsky.social',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/bluesky.svg',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/JanNiclasRuppenthal',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/github.svg',
-  },
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/jan-niclas-ruppenthal-27369a289/',
-    icon: 'https://cdn.jsdelivr.net/npm/social-media-icons@0.3.1/icons/linkedin.svg',
-  },
-  {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/stubbi_33/',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/instagram.svg',
-  },
-]
-
 export const toolGroups: ToolGroup[] = [
   {
     title: 'Programming Languages',
@@ -83,7 +60,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     date: 'May 2025',
-    title: 'Master of Science Completed',
+    title: 'Master of Science',
     description:
       'I finished my M.Sc. in computer science. During my master’s studies, I specialized in software engineering, focusing on the design and development of complex, reliable software systems. In addition, I extended my knowledge of algorithms to address challenging computational problems with greater efficiency and precision.',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
@@ -96,14 +73,14 @@ export const timeline: TimelineEntry[] = [
       'As part of the Master’s module "VR and 3D Interactions", we created a demo for the VRST conference held in Trier, Germany. The project aims to highlight the global risks and environmental dangers associated with water pollution. The demo was developed in Unity and implemented for the Meta Quest 3 VR headset.',
     icon: 'https://api.iconify.design/mdi/paper.svg',
     iconAlt: 'Paper icon',
-    imageSrc: './EcoDivePreview.png',
+    imageSrc: './img/EcoDivePreview.png',
     imageLabel: 'Screenshot of the EcoDive VR experience: Seeing the difference between the clean and polluted ocean under water.',
     link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
     linkLabel: 'View Publication'
   },
   {
     date: 'March 2023',
-    title: 'Bachelor of Science Completed',
+    title: 'Bachelor of Science',
     description:
       'I finished my B.Sc. in computer science. During my bachelor’s studies, I developed a broad foundation in computer science, covering programming, software development, algorithms, and information technology systems. This enabled me to analyze complex problems and create practical software solutions across various domains..',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
@@ -126,14 +103,14 @@ export const timeline: TimelineEntry[] = [
       'CreARtion is an Android App which has been officially published on the Google PlayStore. In this App you can transform objects into sculptures in Augmented Reality. It was developed as part of a module called "Kleines Studienprojekt" at University Trier.',
     icon: 'https://api.iconify.design/mdi/cellphone.svg',
     iconAlt: 'Mobile app icon',
-    imageSrc: './CreARtionPreview.png',
+    imageSrc: './img/CreARtionPreview.png',
     imageLabel: 'Screenshot of the CreARtion App: Manipulating a virtual sphere in AR.',
     link: 'https://github.com/JanNiclasRuppenthal/CreARtion',
     linkLabel: 'Show Repository on GitHub'
   },
   {
     date: 'March 2019',
-    title: 'Built My First Portfolio Website',
+    title: 'Abitur',
     description:
       'Achieved the general qualification for university entrance.',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
@@ -147,5 +124,22 @@ export const timeline: TimelineEntry[] = [
     icon: 'https://api.iconify.design/mdi/birthday-cake-outline.svg',
     iconAlt: 'Birthday cake icon'
   },
+]
 
+export const socialLinks: SocialLink[]  = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/JanNiclasRuppenthal',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/github.svg',
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/jan-niclas-ruppenthal-27369a289/',
+    icon: 'https://cdn.jsdelivr.net/npm/social-media-icons@0.3.1/icons/linkedin.svg',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/stubbi_33/',
+    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/instagram.svg',
+  },
 ]

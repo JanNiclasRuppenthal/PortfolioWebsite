@@ -4,7 +4,7 @@
   <section class="section about reveal" data-reveal>
     <div class="about-photo-container">
       <img 
-        src="/profile-photo.jpg" 
+        src="/img/profile-photo.jpg" 
         alt="Jan Niclas Ruppenthal" 
         class="about-photo-img"
       />
@@ -23,7 +23,7 @@
       </div>
       <div class="about-actions">
         <a class="btn btn-primary" href="mailto:">Contact me</a>
-        <a class="btn btn-primary" href="/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">
+        <a class="btn btn-primary" href="/files/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">
           Download CV
         </a>
       </div>

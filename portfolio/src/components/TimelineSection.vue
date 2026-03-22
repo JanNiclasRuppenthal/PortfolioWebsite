@@ -2,7 +2,8 @@
 
 <template>
   <section class="section reveal reveal-delay-2" data-reveal>
-    <h2>Journey &amp; Milestones</h2>
+    <p class="eyebrow">My journey and highlighted milestones.</p>
+    <h2>Timeline</h2>
     <div class="timeline">
       <article v-for="entry in timeline" :key="entry.date + entry.title" class="timeline-entry">
         <div class="timeline-point" aria-hidden="true">
