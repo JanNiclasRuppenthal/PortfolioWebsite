@@ -8,7 +8,6 @@ import SocialsSection from './components/SocialsSection.vue'
 const currentYear = new Date().getFullYear()
 
 let revealObserver: IntersectionObserver | null = null
-let scrollObserver: IntersectionObserver | null = null
 
 onMounted(() => {
   const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]')
