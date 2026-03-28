@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import ChangeLanguageSection from './components/LanguageSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ToolkitSection from './components/ToolkitSection.vue'
 import TimelineSection from './components/TimelineSection.vue'
@@ -40,11 +41,12 @@ onBeforeUnmount(() => {
     <header class="site-header">
       <div class="brand">JNR#33</div>
       <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#tools">Tools</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#socials">Socials</a>
+        <a href="#about">{{ $t('siteNavAbout') }}</a>
+        <a href="#tools">{{ $t('siteNavToolkit') }}</a>
+        <a href="#timeline">{{ $t('siteNavTimeline') }}</a>
+        <a href="#socials">{{ $t('siteNavSocialMedia') }}</a>
       </nav>
+      <ChangeLanguageSection/>
     </header>
 
     <main>
@@ -97,7 +99,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem clamp(1rem, 4vw, 4rem);
+  padding: 1rem clamp(2rem, 2vw, 8rem);
   border-bottom: 1px solid #3f3f46;
   background: rgba(24, 24, 27, 0.92);
   backdrop-filter: blur(8px);
@@ -119,7 +121,7 @@ body {
 .site-nav a {
   color: #e4e4e7;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   transition: color 0.2s ease;
 }
 

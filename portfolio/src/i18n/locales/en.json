@@ -1,5 +1,10 @@
 {
-  "changeLanguage": "Wechsel die Sprache zu ",
+  "siteNavAbout": "About Me",
+  "siteNavToolkit": "Tools",
+  "siteNavTimeline": "Timeline",
+  "siteNavSocialMedia": "Social Media",
+
+  "changeLanguage": "Sprache wechseln zu ",
   "aboutIntro": "Hello, my name is",
   "aboutFirst": "I'm a {age} year-old PhD student at the Trier University who is fascinated by both software and hardware.\nMy main goal is to earn my doctoral degree and contribute in my field.",
   "aboutSecond": "In my free time and besides programming, I do some workouts and currently learning 3D printing and modelling using CAD software. I also enjoy playing video games, especially RPGs.",

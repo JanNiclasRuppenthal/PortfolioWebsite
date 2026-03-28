@@ -17,19 +17,8 @@ export default defineComponent({
       return currentAge
     })
 
-    const { locale } = useI18n({ useScope: 'global' })
-
-    const toggleLanguage = () => {
-      // Toggle between 'en' and 'de'
-      const newLocale = locale.value === 'en' ? 'de' : 'en'
-      locale.value = newLocale
-      localStorage.setItem('user-lang', newLocale)
-    }
-
     return {
-      age,
-      locale,
-      toggleLanguage
+      age
     }
   }
 })

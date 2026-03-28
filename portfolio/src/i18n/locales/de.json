@@ -1,4 +1,9 @@
 {
+  "siteNavAbout": "Über mich",
+  "siteNavToolkit": "Tools",
+  "siteNavTimeline": "Zeitstrahl",
+  "siteNavSocialMedia": "Soziale Medien",
+
   "changeLanguage": "Change language to ",
   "aboutIntro": "Hallo, mein Name ist",
   "aboutFirst": "Ich bin ein {age} Jahre alter Doktorand an der Universität Trier, der sowohl von Software als auch von Hardware fasziniert ist. Mein Hauptziel ist es, meinen Doktortitel zu erwerben und zum Fortschritt in meinem Fachgebiet beizutragen.",
