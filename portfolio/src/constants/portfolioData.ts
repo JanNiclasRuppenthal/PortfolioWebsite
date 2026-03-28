@@ -14,7 +14,7 @@ export const toolGroups: ToolGroup[] = [
         name: 'C#',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
         alt: 'C sharp logo',
-        why: 'C# is the first programming language which I learned through a book on my own. The reason why I chose this language is because I wanted to program video games and C# is similar to Java.',
+        why: 'C# is the first programming language which I learned  on my own through a book. The reason why I chose this language is because I wanted to program video games and C# is similar to Java.',
       },
       {
         name: 'Python',
@@ -34,16 +34,74 @@ export const toolGroups: ToolGroup[] = [
         why: 'Back in 2021, I started to learn the Unity Engine through a book with a lot of tutorials. Today, I use it for creating interactive 3D and AR experiences that combine logic and creativity.',
       },
       {
-        name: 'Notion',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg',
-        alt: 'Notion logo',
-        why: 'I use Notion alongside handwritten notes on my tablet to capture and organize all relevant information. Combining digital tools and manual input helps me stay flexible, efficient, and well-organized in my work.',
+        name: 'Meta SDK',
+        logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/meta.svg',
+        alt: 'Meta logo',
+        why: 'As part of my master thesis, I began to work with the Meta SDK for the Meta Quest 3 headset. Now, I am using it to create AR applications for my own research projects.',
+      },
+      {
+        name: 'Docker',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
+        alt: 'Docker logo',
+        why: 'For my own research, I use Docker to distribute application in containers, so that everyone has an easy access to them.',
       },
       {
         name: 'Git / GitHub',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
         alt: 'GitHub logo',
         why: 'I use GitHub extensively for version control to manage and track changes in my projects. It helps me collaborate efficiently and maintain a clear history of my code development.',
+      },
+    ],
+  },
+  {
+    title: 'IDEs & Editors',
+    items: [
+      {
+        name: 'IntelliJ IDEA',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg',
+        alt: 'IntelliJ IDEA logo',
+        why: 'For programming in Java, I use IntelliJ IDEA. It was the first IDE I used.',
+      },
+      {
+        name: 'PyCharm',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg',
+        alt: 'PyCharm logo',
+        why: 'During the course of my studies, I learned to use PyCharm for Python programming.',
+      },
+      {
+        name: 'Rider',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg',
+        alt: 'Rider logo',
+        why: 'For the development of AR applications in Unity, I use Rider.',
+      },
+      {
+        name: 'Visual Studio Code',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+        alt: 'Visual Studio Code logo',
+        why: 'I am using Visual Studio Code for editing other files like Markdown or LaTeX files.',
+      },
+    ],
+  },
+  {
+    title: 'Other Tools',
+    items: [
+      {
+        name: 'Notion',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg',
+        alt: 'Notion logo',
+        why: 'I use Notion alongside handwritten notes on my tablet to capture and organize all relevant information. Combining digital tools and manual input helps me stay flexible, efficient, and well-organized in my work.',
+      },
+      {
+        name: 'FreeCAD',
+        logo: 'https://raw.githubusercontent.com/FreeCAD/FreeCAD/refs/heads/main/src/Main/icon.ico',
+        alt: 'FreeCAD logo',
+        why: 'I use the open-source software FreeCAD for 3D modeling. I can create easy 3D models with sketches and then export them as STL files for 3D printing.',
+      },
+      {
+        name: 'Bambu Studio',
+        logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/bambulab.svg',
+        alt: 'Bambu Studio logo',
+        why: 'As an owner of a Bambu Lab 3D printer, I use Bambu Studio to print 3D models from MakerWorld and my own designs.',
       },
     ],
   },
