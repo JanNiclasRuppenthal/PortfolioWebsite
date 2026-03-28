@@ -258,15 +258,24 @@ h2 {
   background: rgba(167, 139, 250, 0.24);
 }
 
+.timeline-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* 2. The Button style stays clean */
 .btn-timeline {
   background: rgba(167, 139, 250, 0.16);
   color: var(--accent-purple-soft);
   border-color: rgba(167, 139, 250, 0.5);
-  display: flex; /* Or block */
+  display: flex;
+  justify-content: center;
+  display: inline-block; /* Or block */
   margin-left: auto;
   margin-right: auto;
   width: max-content; /* Keeps the button from stretching to full width */
   margin-top: 1.5rem;
+  margin-inline: 1.5rem;
 }
 
 .btn-timeline:hover {

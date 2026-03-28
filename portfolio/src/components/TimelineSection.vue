@@ -30,10 +30,15 @@
             </div>
           </div>
 
-          <div v-if="entry.link" class="timeline-buttons">
+          <div class="timeline-actions">
+            <div v-if="entry.link" class="timeline-buttons">
             <a class="btn btn-timeline" :href="entry.link" target="_blank">
               {{ $t(entry.linkLabel) || 'Learn more' }}
             </a>
+            <!--a class="btn btn-timeline" :href="entry.link" target="_blank">
+              {{ $t(entry.linkLabel) || 'Learn more' }}
+            </a-->
+          </div>
           </div>
         </div>
       </article>
