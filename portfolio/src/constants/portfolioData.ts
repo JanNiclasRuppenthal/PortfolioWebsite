@@ -2,54 +2,54 @@ import type { SocialLink, ToolGroup, TimelineEntry } from '../types'
 
 export const toolGroups: ToolGroup[] = [
   {
-    title: 'Programming Languages',
+    title: 'toolTitleProgrammingLanguages',
     items: [
       {
         name: 'Java',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        alt: 'Java logo',
-        why: 'At the beginning of my studies in 2019 I began to learn the programming language Java. Throughout the years I learned to love this programming language. I like the class-based and object-oriented implementation.',
+        alt: 'Java Logo',
+        why: 'toolJava',
       },
       {
         name: 'C#',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-        alt: 'C sharp logo',
-        why: 'C# is the first programming language which I learned  on my own through a book. The reason why I chose this language is because I wanted to program video games and C# is similar to Java.',
+        alt: 'C# Logo',
+        why: 'toolCSharp',
       },
       {
         name: 'Python',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        alt: 'Python logo',
-        why: 'With Python I made my first steps in the programming world. In 2016/2017 I learned the basic concepts of coding with Python. It is not my favorite language because it is not a strictly typed language.',
+        alt: 'Python Logo',
+        why: 'toolPython',
       },
     ],
   },
   {
-    title: 'Dev Tools & Platforms',
+    title: 'toolTitlePlatforms',
     items: [
       {
         name: 'Unity',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
-        alt: 'Unity logo',
-        why: 'Back in 2021, I started to learn the Unity Engine through a book with a lot of tutorials. Today, I use it for creating interactive 3D and AR experiences that combine logic and creativity.',
+        alt: 'Unity Logo',
+        why: 'toolUnity',
       },
       {
         name: 'Meta SDK',
         logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/meta.svg',
-        alt: 'Meta logo',
-        why: 'As part of my master thesis, I began to work with the Meta SDK for the Meta Quest 3 headset. Now, I am using it to create AR applications for my own research projects.',
+        alt: 'Meta Logo',
+        why: 'toolMetaSDK',
       },
       {
         name: 'Docker',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
-        alt: 'Docker logo',
-        why: 'For my own research, I use Docker to distribute application in containers, so that everyone has an easy access to them.',
+        alt: 'Docker Logo',
+        why: 'toolDocker',
       },
       {
         name: 'Git / GitHub',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-        alt: 'GitHub logo',
-        why: 'I use GitHub extensively for version control to manage and track changes in my projects. It helps me collaborate efficiently and maintain a clear history of my code development.',
+        alt: 'GitHub Logo',
+        why: 'toolGit',
       },
     ],
   },
@@ -59,26 +59,26 @@ export const toolGroups: ToolGroup[] = [
       {
         name: 'IntelliJ IDEA',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg',
-        alt: 'IntelliJ IDEA logo',
-        why: 'For programming in Java, I use IntelliJ IDEA. It was the first IDE I used.',
+        alt: 'IntelliJ IDEA Logo',
+        why: 'toolIntelliJ',
       },
       {
         name: 'PyCharm',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg',
-        alt: 'PyCharm logo',
-        why: 'During the course of my studies, I learned to use PyCharm for Python programming.',
+        alt: 'PyCharm Logo',
+        why: 'toolPyCharm',
       },
       {
         name: 'Rider',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg',
-        alt: 'Rider logo',
-        why: 'For the development of AR applications in Unity, I use Rider.',
+        alt: 'Rider Logo',
+        why: 'toolRider',
       },
       {
         name: 'Visual Studio Code',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
-        alt: 'Visual Studio Code logo',
-        why: 'I am using Visual Studio Code for editing other files like Markdown or LaTeX files.',
+        alt: 'Visual Studio Code Logo',
+        why: 'toolVSCode',
       },
     ],
   },
@@ -88,20 +88,20 @@ export const toolGroups: ToolGroup[] = [
       {
         name: 'Notion',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg',
-        alt: 'Notion logo',
-        why: 'I use Notion alongside handwritten notes on my tablet to capture and organize all relevant information. Combining digital tools and manual input helps me stay flexible, efficient, and well-organized in my work.',
+        alt: 'Notion Logo',
+        why: 'toolNotion',
       },
       {
         name: 'FreeCAD',
         logo: 'https://raw.githubusercontent.com/FreeCAD/FreeCAD/refs/heads/main/src/Main/icon.ico',
-        alt: 'FreeCAD logo',
-        why: 'I use the open-source software FreeCAD for 3D modeling. I can create easy 3D models with sketches and then export them as STL files for 3D printing.',
+        alt: 'FreeCAD Logo',
+        why: 'toolFreeCAD',
       },
       {
         name: 'Bambu Studio',
         logo: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/bambulab.svg',
-        alt: 'Bambu Studio logo',
-        why: 'As an owner of a Bambu Lab 3D printer, I use Bambu Studio to print 3D models from MakerWorld and my own designs.',
+        alt: 'Bambu Studio Logo',
+        why: 'toolBambuStudio',
       },
     ],
   },
@@ -109,78 +109,83 @@ export const toolGroups: ToolGroup[] = [
 
 export const timeline: TimelineEntry[] = [
   {
-    date: 'July 2025',
-    title: 'Started My PhD Journey',
+    date: 'timelinePhDDate',
+    title: 'timelinePhDTitle',
     description:
-      'Currently, I am pursuing a PhD in computer science, focusing my research on software engineering and augmented reality to develop advanced methods for designing interactive and immersive systems.',
+      'timelinePhDDescription',
     icon: 'https://api.iconify.design/mdi/school-outline.svg',
-    iconAlt: 'Education icon',
+    iconAlt: 'timelinePhDIconAlt',
+    linkLabel: ''
   },
   {
-    date: 'May 2025',
-    title: 'Master of Science',
+    date: 'timelineMScDate',
+    title: 'timelineMScTitle',
     description:
-      'I finished my M.Sc. in computer science. During my master’s studies, I specialized in software engineering, focusing on the design and development of complex, reliable software systems. In addition, I extended my knowledge of algorithms to address challenging computational problems with greater efficiency and precision.',
+      'timelineMScDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
-    iconAlt: 'Certificate icon',
+    iconAlt: 'timelineMScIconAlt',
+    linkLabel: ''
   },
   {
-    date: 'October 2024',
-    title: 'EcoDive: Enhancing Presence and Ambient Environmental Awareness in a Virtual Reality Experience for Underwater Marine Debris Collection',
+    date: 'timelineEcoDiveDate',
+    title: 'timelineEcoDiveTitle',
     description:
-      'As part of the Master’s module "VR and 3D Interactions", we created a demo for the VRST conference held in Trier, Germany. The project aims to highlight the global risks and environmental dangers associated with water pollution. The demo was developed in Unity and implemented for the Meta Quest 3 VR headset.',
+      'timelineEcoDiveDescription',
     icon: 'https://api.iconify.design/mdi/paper.svg',
-    iconAlt: 'Paper icon',
+    iconAlt: 'timelineEcoDiveIconAlt',
     imageSrc: './img/EcoDivePreview.png',
-    imageLabel: 'Screenshot of the EcoDive VR experience: Seeing the difference between the clean and polluted ocean under water.',
+    imageLabel: 'timelineEcoDiveImageAlt',
     link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
-    linkLabel: 'View Publication'
+    linkLabel: 'showPublication'
   },
   {
-    date: 'March 2023',
-    title: 'Bachelor of Science',
+    date: 'timelineBScDate',
+    title: 'timelineBScTitle',
     description:
-      'I finished my B.Sc. in computer science. During my bachelor’s studies, I developed a broad foundation in computer science, covering programming, software development, algorithms, and information technology systems. This enabled me to analyze complex problems and create practical software solutions across various domains..',
+      'timelineBScDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
-    iconAlt: 'Certificate icon',
+    iconAlt: 'timelineBScIconAlt',
+    linkLabel: ''
   },
   {
-    date: 'August 2022',
-    title: 'Portfolio Website Launched',
+    date: 'timelinePortfolioWebsiteDate',
+    title: 'timelinePortfolioWebsiteTitle',
     description:
-      'This website serves as a platform that showcases the diverse range of tools I proficiently work with, but also highlights the impressive projects I have accomplished.',
+      'timelinePortfolioWebsiteDescription',
     icon: 'https://api.iconify.design/mdi/application-brackets-outline.svg',
     iconAlt: 'Developing website icon',
     link: 'https://github.com/JanNiclasRuppenthal/PortfolioWebsite',
-    linkLabel: 'Show Repository on GitHub'
+    linkLabel: 'showRepository'
   },
   {
-    date: 'September 2021',
-    title: 'Developed CreARtion on Android',
+    date: 'timelineCreARtionDate',
+    title: 'timelineCreARtionTitle',
     description:
-      'CreARtion is an Android App which has been officially published on the Google PlayStore. In this App you can transform objects into sculptures in Augmented Reality. It was developed as part of a module called "Kleines Studienprojekt" at University Trier.',
+      'timelineCreARtionDescription',
     icon: 'https://api.iconify.design/mdi/cellphone.svg',
     iconAlt: 'Mobile app icon',
     imageSrc: './img/CreARtionPreview.png',
-    imageLabel: 'Screenshot of the CreARtion App: Manipulating a virtual sphere in AR.',
+    imageLabel: 'timelineCreARtionImageLabel',
     link: 'https://github.com/JanNiclasRuppenthal/CreARtion',
-    linkLabel: 'Show Repository on GitHub'
+    linkLabel: 'showRepository'
   },
   {
-    date: 'March 2019',
-    title: 'Abitur',
+    date: 'timelineAbiturDate',
+    title: 'timelineAbiturTitle',
     description:
-      'Achieved the general qualification for university entrance.',
+      'timelineAbiturDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
-    iconAlt: 'Certificate icon'
+    iconAlt: 'timelineAbiturIconAlt',
+    linkLabel: ''
   },
   {
-    date: 'November 1999',
-    title: 'Birthdate',
+    date: 'timelineBirthdateDate',
+    title: 'timelineBirthdateTitle',
     description:
-      'System.out.println("Hello World!")',
+      'timelineBirthdateDescription',
     icon: 'https://api.iconify.design/mdi/birthday-cake-outline.svg',
-    iconAlt: 'Birthday cake icon'
+    iconAlt: 'timelineBirthdateIconAlt',
+    linkLabel: ''
   },
 ]
 

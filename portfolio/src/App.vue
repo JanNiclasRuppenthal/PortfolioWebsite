@@ -328,8 +328,9 @@ h2 {
 }
 
 .social-card {
-  border: 1px solid #3f3f46;
-  background: #27272a;
+  background: rgba(167, 139, 250, 0.16);
+  color: var(--accent-purple-soft);
+  border-color: rgba(167, 139, 250, 0.5);
   border-radius: 14px;
   padding: 1rem;
   min-height: 120px;
@@ -354,9 +355,9 @@ h2 {
 
 .social-card:hover,
 .social-card:focus-visible {
-  border-color: rgba(125, 211, 252, 0.7);
-  box-shadow: inset 0 0 0 1px rgba(125, 211, 252, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.22);
   transform: translateY(-2px);
+  background: rgba(167, 139, 250, 0.24);
 }
 
 .tool-why {

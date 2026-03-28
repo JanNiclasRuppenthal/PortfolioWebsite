@@ -4,8 +4,8 @@ import { socialLinks } from '../constants/portfolioData'
 
 <template>
   <section class="section reveal reveal-delay-2" data-reveal>
-    <p class="eyebrow">Let us connect.</p>
-    <h2>Social Media</h2>
+    <p class="eyebrow">{{ $t('socialMediaSubtitle') }}</p>
+    <h2>{{ $t('socialMediaTitle') }}</h2>
     <div class="social-card-grid">
       <a
         v-for="item in socialLinks"

@@ -1,0 +1,87 @@
+{
+  "changeLanguage": "Wechsel die Sprache zu ",
+  "aboutIntro": "Hello, my name is",
+  "aboutFirst": "I'm a {age} year-old PhD student at the Trier University who is fascinated by both software and hardware.\nMy main goal is to earn my doctoral degree and contribute in my field.",
+  "aboutSecond": "In my free time and besides programming, I do some workouts and currently learning 3D printing and modelling using CAD software. I also enjoy playing video games, especially RPGs.",
+  "aboutContact": "Contact me",
+  "aboutDownloadCV": "Download CV",
+
+
+  "toolkitTitle": "My Toolkit",
+  "toolkitSubtitle": "Tools I use to bring ideas to life.",
+
+  "toolTitleProgrammingLanguages": "Programming Languages",
+  "toolJava": "At the beginning of my studies in 2019 I began to learn the programming language Java. Throughout the years I learned to love this programming language. I like the class-based and object-oriented implementation.",
+  "toolPython": "With Python I made my first steps in the programming world. In 2016/2017 I learned the basic concepts of coding with Python. It is not my favorite language because it is not a strictly typed language.",
+  "toolCSharp": "C# is the first programming language which I learned  on my own through a book. The reason why I chose this language is because I wanted to program video games and C# is similar to Java.",
+
+  "toolTitlePlatforms": "Dev Tools & Platforms",
+  "toolUnity": "Back in 2021, I started to learn the Unity Engine through a book with a lot of tutorials. Today, I use it for creating interactive 3D and AR experiences that combine logic and creativity.",
+  "toolMetaSDK": "As part of my master thesis, I began to work with the Meta SDK for the Meta Quest 3 headset. Now, I am using it to create AR applications for my own research projects.",
+  "toolDocker": "For my own research, I use Docker to distribute application in containers, so that everyone has an easy access to them.",
+  "toolGit": "I use GitHub extensively for version control to manage and track changes in my projects. It helps me collaborate efficiently and maintain a clear history of my code development.",
+
+  "toolTitleIDEs": "IDEs & Editors",
+  "toolIntelliJ": "For programming in Java, I use IntelliJ IDEA. It was the first IDE I used.",
+  "toolPyCharm": "During the course of my studies, I learned to use PyCharm for Python programming.",
+  "toolRider": "For the development of AR applications in Unity, I use Rider.",
+  "toolVSCode": "I am using Visual Studio Code for editing other files like Markdown or LaTeX files.",
+
+  "toolTitleOtherTools": "Other Tools",
+  "toolNotion": "I use Notion alongside handwritten notes to capture and organize all relevant information and ideas. Combining digital tools and manual input helps me stay well-organized in my work.",
+  "toolFreeCAD": "I use the open-source software FreeCAD for 3D modeling. I can create easy 3D models with sketches and then export them as STL files for 3D printing.",
+  "toolBambuStudio": "As an owner of a Bambu Lab 3D printer, I use Bambu Studio to print 3D models from MakerWorld and my own designs.",
+
+
+  "timelineTitle": "Timeline",
+  "timelineSubtitle": "My journey and highlighted milestones.",
+  "timelinePhDDate": "Since July 2025",
+  "timelinePhDTitle": "Started My PhD Journey",
+  "timelinePhDDescription": "Currently, I am pursuing a PhD in computer science, focusing my research on software engineering and augmented reality to develop advanced methods for designing interactive and immersive systems.",
+  "timelinePhDIconAlt": "Education Icon",
+
+  "timelineMScDate": "May 2025",
+  "timelineMScTitle": "Master of Science in Computer Science",
+  "timelineMScDescription": "I finished my M.Sc. in computer science. During my master’s studies, I specialized in software engineering, focusing on the design and development of complex, reliable software systems. In addition, I extended my knowledge of algorithms to address challenging computational problems with greater efficiency and precision.",
+  "timelineMScIconAlt": "Certificate Icon",
+
+  "timelineEcoDiveDate": "October 2024",
+  "timelineEcoDiveTitle": "EcoDive: Enhancing Presence and Ambient Environmental Awareness in a Virtual Reality Experience for Underwater Marine Debris Collection",
+  "timelineEcoDiveDescription": "As part of the Master’s module \"VR and 3D Interactions\", we created a demo for the VRST conference held in Trier, Germany. The project aims to highlight the global risks and environmental dangers associated with water pollution. The demo was developed in Unity and implemented for the Meta Quest 3 VR headset.",
+  "timelineEcoDiveIconAlt": "Paper Icon",
+  "timelineEcoDiveImageAlt": "Screenshot of the EcoDive VR experience: Seeing the difference between the clean and polluted ocean under water.",
+
+  "timelineBScDate": "March 2023",
+  "timelineBScTitle": "Bachelor of Science",
+  "timelineBScDescription": " finished my B.Sc. in computer science. During my bachelor’s studies, I developed a broad foundation in computer science, covering programming, software development, algorithms, and information technology systems. This enabled me to analyze complex problems and create practical software solutions across various domains.",
+  "timelineBScIconAlt": "Certificate Icon",
+
+  "timelinePortfolioWebsiteDate": "August 2022",
+  "timelinePortfolioWebsiteTitle": "Portfolio Website Launched",
+  "timelinePortfolioWebsiteDescription": "This website serves as a platform that showcases the diverse range of tools I proficiently work with, but also highlights the impressive projects I have accomplished.",
+  "timelinePortfolioWebsiteIconAlt": "Developing Website Icon",
+
+  "timelineCreARtionDate": "September 2021",
+  "timelineCreARtionTitle": "Developed CreARtion on Android",
+  "timelineCreARtionDescription": "CreARtion is an Android App which has been officially published on the Google PlayStore. In this App you can transform objects into sculptures in Augmented Reality. It was developed as part of a module called \"Kleines Studienprojekt\" at University Trier.",
+  "timelineCreARtionIconAlt": "Mobile App Icon",
+  "timelineCreARtionImageAlt": "Screenshot of the CreARtion App: Manipulating a virtual sphere in AR.",
+
+  "timelineAbiturDate": "March 2019",
+  "timelineAbiturTitle": "Abitur",
+  "timelineAbiturDescription": "Achieved the general qualification for university entrance.",
+  "timelineAbiturIconAlt": "Certificate Icon",
+
+  "timelineBirthdateDate": "November 1999",
+  "timelineBirthdateTitle": "Birthdate",
+  "timelineBirthdateDescription": "System.out.println(\"Hello World!\")",
+  "timelineBirthdateIconAlt": "Birthday Cake Icon",
+
+
+  "enlargeImage": "Click to enlarge image",
+  "showRepository": "Show repository on GitHub",
+  "showPublication": "Show publication",
+
+  "socialMediaTitle": "Social Media",
+  "socialMediaSubtitle": "Let us connect on social media!"
+}

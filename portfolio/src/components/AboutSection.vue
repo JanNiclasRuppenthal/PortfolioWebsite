@@ -1,6 +1,14 @@
 <script lang="ts" src="./AboutSection.ts"></script>
 
 <template>
+
+  <div class="lang-container">
+    <button class="flag-btn toggle-btn" @click="toggleLanguage">
+      <span>{{ $t('changeLanguage') }}</span>
+      <span :class="['fi', locale === 'en' ? 'fi-de' : 'fi-gb']"></span>
+    </button>
+  </div>
+
   <section class="section about reveal" data-reveal>
     <div class="about-photo-container">
       <img 
@@ -10,28 +18,62 @@
       />
     </div>
     <div class="about-content">
-      <p class="eyebrow">Hello, my name is</p>
+      <p class="eyebrow">{{ $t('aboutIntro') }}</p>
       <h1 class="name-title">Jan Niclas Ruppenthal</h1>
       <div class="about-highlight">
         <p class="lead">
-          I'm a {{ age }} year-old PhD student at the Trier University who is fascinated by both software and hardware.
-          My main goal is to earn my doctoral degree and contribute to advancing knowledge in my field.
+          {{ $t('aboutFirst', { age: age }) }}
         </p>
         <p>
-          In my free time and besides programming, I do some workouts and currently learning 3D printing and modelling using CAD software.
+          {{ $t('aboutSecond') }}
         </p>
       </div>
       <!--div class="about-actions">
-        <a class="btn btn-primary" href="mailto:">Contact me</a>
-        <a class="btn btn-primary" href="/files/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">
-          Download CV
-        </a>
+        <a class="btn btn-primary" href="mailto:">{{ $t('aboutContact') }}</a>
+        <a class="btn btn-primary" href="/files/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">{{ $t('aboutDownloadCV') }}</a>
       </div-->
     </div>
   </section>
 </template>
 
 <style scoped>
+
+.lang-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.flag-btn {
+  background: rgba(167, 139, 250, 0.16);
+  color: var(--accent-purple-soft);
+  border-color: rgba(167, 139, 250, 0.5);
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flag-btn:hover {
+  background: rgba(167, 139, 250, 0.24);
+  transform: translateY(-2px);
+}
+
+.flag-btn:active {
+  transform: translateY(0);
+}
+
+.fi {
+  width: 20px;
+  border-radius: 2px;
+}
+
 .about-photo-container {
   margin-top: 2.6rem;
   width: 100%;

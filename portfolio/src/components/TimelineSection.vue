@@ -2,18 +2,18 @@
 
 <template>
   <section class="section reveal reveal-delay-2" data-reveal>
-    <p class="eyebrow">My journey and highlighted milestones.</p>
-    <h2>Timeline</h2>
+    <p class="eyebrow">{{ $t('timelineSubtitle') }}</p>
+    <h2>{{ $t('timelineTitle') }}</h2>
     <div class="timeline">
       <article v-for="entry in timeline" :key="entry.date + entry.title" class="timeline-entry">
         <div class="timeline-point" aria-hidden="true">
-          <img :src="entry.icon" :alt="entry.iconAlt" />
+          <img :src="entry.icon" :alt="$t(entry.iconAlt)" />
         </div>
         
         <div class="timeline-content">
-          <p class="timeline-date">{{ entry.date }}</p>
-          <h3>{{ entry.title }}</h3>
-          <p>{{ entry.description }}</p>
+          <p class="timeline-date">{{ $t(entry.date) }}</p>
+          <h3>{{ $t(entry.title) }}</h3>
+          <p>{{ $t(entry.description) }}</p>
 
           <div 
             v-if="entry.imageSrc" 
@@ -22,17 +22,17 @@
           >
             <img 
               :src="entry.imageSrc" 
-              :alt="entry.imageLabel || entry.title"
+              :alt="entry.imageLabel || $t(entry.title)"
               class="timeline-photo"
             />
             <div class="expand-overlay">
-              <span>Click to enlarge</span>
+              <span>{{ $t('enlargeImage') }}</span>
             </div>
           </div>
 
           <div v-if="entry.link" class="timeline-buttons">
             <a class="btn btn-timeline" :href="entry.link" target="_blank">
-              {{ entry.linkLabel || 'Learn more' }}
+              {{ $t(entry.linkLabel) || 'Learn more' }}
             </a>
           </div>
         </div>

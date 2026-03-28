@@ -1,0 +1,87 @@
+{
+  "changeLanguage": "Change language to ",
+  "aboutIntro": "Hallo, mein Name ist",
+  "aboutFirst": "Ich bin ein {age} Jahre alter Doktorand an der Universität Trier, der sowohl von Software als auch von Hardware fasziniert ist. Mein Hauptziel ist es, meinen Doktortitel zu erwerben und zum Fortschritt in meinem Fachgebiet beizutragen.",
+  "aboutSecond": "In meiner Freizeit und neben dem Programmieren mache ich etwas Sport und lerne derzeit 3D-Druck und Modellierung mit CAD-Software. Ich genieße auch das Spielen von Videospielen, insbesondere Rollenspiele.",
+  "aboutContact": "Kontaktiere mich",
+  "aboutDownloadCV": "Lebenslauf herunterladen",
+
+
+
+  "toolkitTitle": "Mein Toolkit",
+  "toolkitSubtitle": "Tools, die ich nutze, um Ideen zum Leben zu erwecken.",
+
+  "toolTitleProgrammingLanguages": "Programmiersprachen",
+  "toolJava": "",
+  "toolPython": "",
+  "toolCSharp": "",
+
+  "toolPlatforms": "Entwicklungswerkzeuge & Plattformen",
+  "toolUnity": "",
+  "toolMetaSDK": "",
+  "toolDocker": "",
+  "toolGit": "",
+
+  "toolIDEs": "IDEs & Editoren",
+  "toolIntelliJ": "",
+  "toolPyCharm": "",
+  "toolRider": "",
+  "toolVSCode": "",
+
+  "toolOtherTools": "Andere Werkzeuge",
+  "toolNotion": "",
+  "toolFreeCAD": "",
+  "toolBambuStudio": "",
+
+
+
+  "timelineTitle": "Zeitstrahl",
+  "timelineSubtitle": "Mein Weg und wichtige Meilensteine.",
+
+  "timelinePhDDate": "",
+  "timelinePhDTitle": "",
+  "timelinePhDDescription": "",
+  "timelinePhDIconAlt": "",
+
+  "timelineMScDate": "",
+  "timelineMScTitle": "",
+  "timelineMScDescription": "",
+  "timelineMScIconAlt": "",
+
+  "timelineEcoDiveDate": "",
+  "timelineEcoDiveTitle": "",
+  "timelineEcoDiveDescription": "",
+  "timelineEcoDiveIconAlt": "",
+
+  "timelineBScDate": "",
+  "timelineBScTitle": "",
+  "timelineBScDescription": "",
+  "timelineBScIconAlt": "",
+
+  "timelinePortfolioWebsiteDate": "",
+  "timelinePortfolioWebsiteTitle": "",
+  "timelinePortfolioWebsiteDescription": "",
+  "timelinePortfolioWebsiteIconAlt": "",
+
+  "timelineCreARtionDate": "",
+  "timelineCreARtionTitle": "",
+  "timelineCreARtionDescription": "",
+  "timelineCreARtionIconAlt": "",
+
+  "timelineAbiturDate": "",
+  "timelineAbiturTitle": "",
+  "timelineAbiturDescription": "",
+  "timelineAbiturIconAlt": "",
+
+  "timelineBirthdateDate": "",
+  "timelineBirthdateTitle": "",
+  "timelineBirthdateDescription": "",
+  "timelineBirthdateIconAlt": "",
+
+  "enlargeImage": "Klicken, um das Bild zu vergrößern",
+  "showRepository": "Repository auf GitHub anzeigen",
+  "showPublication": "Publikation ansehen",
+
+  "socialMediaTitle": "Soziale Medien",
+  "socialMediaSubtitle": "Lass uns auf sozialen Medien vernetzen!"
+}
