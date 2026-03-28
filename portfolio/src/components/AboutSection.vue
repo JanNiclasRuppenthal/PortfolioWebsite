@@ -21,12 +21,12 @@
           In my free time and besides programming, I do some workouts and currently learning 3D printing and modelling using CAD software.
         </p>
       </div>
-      <div class="about-actions">
+      <!--div class="about-actions">
         <a class="btn btn-primary" href="mailto:">Contact me</a>
         <a class="btn btn-primary" href="/files/LebenslaufRuppenthalJanNiclas.pdf" target="_blank" rel="noreferrer noopener">
           Download CV
         </a>
-      </div>
+      </div-->
     </div>
   </section>
 </template>
