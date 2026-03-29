@@ -19,7 +19,9 @@ export type TimelineEntry = {
   imageSrc?: string
   imageLabel?: string
   link?: string
-  linkLabel: string
+  linkLabel: string,
+  link2?: string
+  linkLabel2: string
 }
 
 export type SocialLink = {

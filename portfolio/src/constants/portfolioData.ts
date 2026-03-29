@@ -115,7 +115,8 @@ export const timeline: TimelineEntry[] = [
       'timelinePhDDescription',
     icon: 'https://api.iconify.design/mdi/school-outline.svg',
     iconAlt: 'timelinePhDIconAlt',
-    linkLabel: ''
+    linkLabel: '',
+    linkLabel2: ''
   },
   {
     date: 'timelineMScDate',
@@ -124,7 +125,8 @@ export const timeline: TimelineEntry[] = [
       'timelineMScDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
     iconAlt: 'timelineMScIconAlt',
-    linkLabel: ''
+    linkLabel: '',
+    linkLabel2: ''
   },
   {
     date: 'timelineEcoDiveDate',
@@ -136,7 +138,9 @@ export const timeline: TimelineEntry[] = [
     imageSrc: './img/EcoDivePreview.png',
     imageLabel: 'timelineEcoDiveImageAlt',
     link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
-    linkLabel: 'showPublication'
+    linkLabel: 'showPublication',
+    link2: 'https://github.com/JanNiclasRuppenthal/VR_Demos',
+    linkLabel2: 'showRepository'
   },
   {
     date: 'timelineBScDate',
@@ -145,7 +149,8 @@ export const timeline: TimelineEntry[] = [
       'timelineBScDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
     iconAlt: 'timelineBScIconAlt',
-    linkLabel: ''
+    linkLabel: '',
+    linkLabel2: ''
   },
   {
     date: 'timelinePortfolioWebsiteDate',
@@ -155,7 +160,8 @@ export const timeline: TimelineEntry[] = [
     icon: 'https://api.iconify.design/mdi/application-brackets-outline.svg',
     iconAlt: 'Developing website icon',
     link: 'https://github.com/JanNiclasRuppenthal/PortfolioWebsite',
-    linkLabel: 'showRepository'
+    linkLabel: 'showRepository',
+    linkLabel2: ''
   },
   {
     date: 'timelineCreARtionDate',
@@ -167,7 +173,8 @@ export const timeline: TimelineEntry[] = [
     imageSrc: './img/CreARtionPreview.png',
     imageLabel: 'timelineCreARtionImageLabel',
     link: 'https://github.com/JanNiclasRuppenthal/CreARtion',
-    linkLabel: 'showRepository'
+    linkLabel: 'showRepository',
+    linkLabel2: ''
   },
   {
     date: 'timelineAbiturDate',
@@ -176,7 +183,8 @@ export const timeline: TimelineEntry[] = [
       'timelineAbiturDescription',
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
     iconAlt: 'timelineAbiturIconAlt',
-    linkLabel: ''
+    linkLabel: '',
+    linkLabel2: ''
   },
   {
     date: 'timelineBirthdateDate',
@@ -185,7 +193,8 @@ export const timeline: TimelineEntry[] = [
       'timelineBirthdateDescription',
     icon: 'https://api.iconify.design/mdi/birthday-cake-outline.svg',
     iconAlt: 'timelineBirthdateIconAlt',
-    linkLabel: ''
+    linkLabel: '',
+    linkLabel2: ''
   },
 ]
 
