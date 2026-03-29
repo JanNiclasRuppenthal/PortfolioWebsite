@@ -1,0 +1,94 @@
+{
+  "siteNavAbout": "Über mich",
+  "siteNavToolkit": "Tools",
+  "siteNavTimeline": "Zeitstrahl",
+  "siteNavSocialMedia": "Soziale Medien",
+
+  "changeLanguage": "Change language to ",
+  "aboutIntro": "Hallo, mein Name ist",
+  "aboutFirst": "Ich bin ein {age} Jahre alter Doktorand an der Universität Trier, der sowohl von Software als auch von Hardware fasziniert ist. Mein Hauptziel ist es, meinen Doktortitel zu erwerben und zum Fortschritt in meinem Fachgebiet beizutragen.",
+  "aboutSecond": "In meiner Freizeit und neben dem Programmieren mache ich etwas Sport und lerne derzeit 3D-Druck und Modellierung mit CAD-Software. Zusätzlich spiele ich gerne Videospiele.",
+  "aboutContact": "Kontaktiere mich",
+  "aboutDownloadCV": "Lebenslauf herunterladen",
+
+
+
+  "toolkitTitle": "Mein Toolkit",
+  "toolkitSubtitle": "Tools, die ich nutze, um Ideen zum Leben zu erwecken.",
+
+  "toolTitleProgrammingLanguages": "Programmiersprachen",
+  "toolJava": "Zu Beginn meines Studiums im Jahr 2019 begann ich, die Programmiersprache Java zu lernen. Über die Jahre habe ich gelernt, diese Programmiersprache zu lieben. Ich mag die klassenbasierte und objektorientierte Implementierung.",
+  "toolPython": "Meine ersten Schritte in der Programmierwelt habe ich mit Python gemacht. Im Jahr 2016/2017 habe ich die grundlegenden Programmierkonzepte mit Python gelernt. Es ist nicht meine Lieblingssprache, da es keine streng typisierte Sprache ist.",
+  "toolCSharp": "C# ist die erste Programmiersprache, die ich mir selbstständig durch ein Buch beigebracht habe. Der Grund, warum ich diese Sprache gewählt habe, ist, dass ich Videospiele programmieren wollte und C# ähnlich zu Java ist.",
+
+  "toolPlatforms": "Entwicklungswerkzeuge & Plattformen",
+  "toolUnity": "Wie auch C#, habe ich die Unity Engine im Jahr 2021 durch ein Buch mit vielen Tutorials gelernt. Heute nutze ich sie, um interaktive AR-Erlebnisse zu schaffen, die Logik und Kreativität verbinden.",
+  "toolMetaSDK": "Ein Teil meiner Masterarbeit war die Arbeit mit dem Meta SDK für die Meta Quest 3. Jetzt nutze ich es, um AR-Anwendungen für meine eigenen Forschungsprojekte zu erstellen.",
+  "toolDocker": "Für meine eigene Forschung nutze ich Docker, um Anwendungen in Containern zu verteilen, damit jeder einfachen Zugriff auf sie hat.",
+  "toolGit": "Für die Versionskontrolle und das Verfolgen von Änderungen in meinen Projekten nutze ich Git und GitHub.",
+
+  "toolIDEs": "IDEs & Editoren",
+  "toolIntelliJ": "Ich nutze IntelliJ IDEA, um Applikationen in Java zu entwickeln. Es war die erste IDE, die ich gelernt und benutzt habe.",
+  "toolPyCharm": "Im Verlauf meines Studiums habe ich begonnen, PyCharm für die Python-Programmierung zu verwenden.",
+  "toolRider": "Für die Entwicklung von AR-Anwendungen in Unity nutze ich Rider.",
+  "toolVSCode": "Ich verwende Visual Studio Code für das Bearbeiten anderer Dateien wie Markdown oder LaTeX-Dateien.",
+
+  "toolOtherTools": "Andere Werkzeuge",
+  "toolNotion": "Ich nutze Notion neben handschriftlichen Notizen, um alle relevanten Informationen und Ideen zu erfassen und zu organisieren. Diese helfen mir organisiert zu bleiben.",
+  "toolFreeCAD": "Ich nutze die Open-Source-Software FreeCAD für die 3D-Modellierung. Durch Skizzen kann ich einfache Modelle erstellen und sie dann für den 3D-Druck exportieren.",
+  "toolBambuStudio": "Als Besitzer eines Bambu Lab 3D-Druckers nutze ich Bambu Studio, um 3D-Modelle aus MakerWorld und meinen eigenen Modelle zu drucken.",
+
+
+
+  "timelineTitle": "Zeitstrahl",
+  "timelineSubtitle": "Mein Weg und wichtige Meilensteine.",
+
+  "timelinePhDDate": "Seit Juli 2025",
+  "timelinePhDTitle": "Start meiner Promotion",
+  "timelinePhDDescription": "Derzeit verfolge ich einen Doktorgrad in Informatik, wobei ich meine Forschung auf Softwaretechnik und erweiterte Realität konzentriere, um fortschrittliche Methoden zur Gestaltung interaktiver und immersiver Systeme zu entwickeln.",
+  "timelinePhDIconAlt": "Ausbildungs-Icon",
+
+  "timelineMScDate": "Mai 2025",
+  "timelineMScTitle": "Master of Science in Informatik",
+  "timelineMScDescription": "Ich habe meinen M.Sc. in Informatik abgeschlossen. Während meines Masterstudiums habe ich mich auf Softwaretechnik spezialisiert. Dabei lag der Fokus auf den fortgeschrittenen Konzepten der Softwareentwicklung und Analyse von Programmen.",
+  "timelineMScIconAlt": "Zertifikat-Icon",
+
+  "timelineEcoDiveDate": "Oktober 2024",
+  "timelineEcoDiveTitle": "EcoDive: Enhancing Presence and Ambient Environmental Awareness in a Virtual Reality Experience for Underwater Marine Debris Collection",
+  "timelineEcoDiveDescription": "Als Teil des Mastermoduls \"VR and 3D Interactions\" haben wir eine Demo für die VRST Konferenz in Trier, Deutschland, erstellt. Das Projekt zielt darauf ab, die globalen Risiken und Umweltgefahren im Zusammenhang mit Wasserverschmutzung hervorzuheben. Die Demo wurde in Unity entwickelt und für das Meta Quest 3 VR-Headset implementiert.",
+  "timelineEcoDiveIconAlt": "Paper Icon",
+  "timelineEcoDiveImageAlt": "Screenshot aus der Demo: Unterwasseraufnahme, die den Unterschied zwischen sauberem und verschmutztem Ozean zeigt.",
+
+  "timelineBScDate": "März 2023",
+  "timelineBScTitle": "Bachelor of Science in Informatik",
+  "timelineBScDescription": "Ich habe meinen B.Sc. in Informatik abgeschlossen. Während meines Bachelorstudiums habe ich eine breite Grundlage in der Informatik entwickelt, die Programmierung, Softwareentwicklung und Algorithmen umfasst. Das Studium ermöglichte mir, komplexe Probleme zu analysieren und praktische Softwarelösungen in zu erstellen.",
+  "timelineBScIconAlt": "Zertifikat-Icon",
+
+  "timelinePortfolioWebsiteDate": "August 2022",
+  "timelinePortfolioWebsiteTitle": "Portfolio-Website erstellt",
+  "timelinePortfolioWebsiteDescription": "Diese Website dient als Plattform, um die vielfältigen Werkzeuge, die ich benutze, sowie die Projekte, die ich umgesetzt habe, zu präsentieren.",
+  "timelinePortfolioWebsiteIconAlt": "Webentwicklung-Icon",
+
+  "timelineCreARtionDate": "September 2021",
+  "timelineCreARtionTitle": "Entwicklung von CreARtion für Android",
+  "timelineCreARtionDescription": "CreARtion ist eine Android-App, die offiziell im Google PlayStore veröffentlicht wurde. In dieser App können Objekte in der erweiterten Realität in Skulpturen transformiert werden. Sie wurde als Teil eines Moduls namens \"Kleines Studienprojekt\" an der Universität Trier entwickelt.",
+  "timelineCreARtionIconAlt": "Mobile App Icon",
+  "timelineCreARtionImageAlt": "Screenshot aus der CreARtion App: Manipulation eines virtuellen Kugel in AR.",
+
+  "timelineAbiturDate": "März 2019",
+  "timelineAbiturTitle": "Abitur",
+  "timelineAbiturDescription": "Erwerb der allgemeinen Hochschulreife.",
+  "timelineAbiturIconAlt": "Zertifikat-Icon",
+
+  "timelineBirthdateDate": "November 1999",
+  "timelineBirthdateTitle": "Geburtstag",
+  "timelineBirthdateDescription": "System.out.println(\"Hello World!\")",
+  "timelineBirthdateIconAlt": "Geburtstagskuchen-Icon",
+
+  "enlargeImage": "Klicken, um das Bild zu vergrößern",
+  "showRepository": "Repository auf GitHub anzeigen",
+  "showPublication": "Publikation ansehen",
+
+  "socialMediaTitle": "Soziale Medien",
+  "socialMediaSubtitle": "Lass uns auf sozialen Medien vernetzen!"
+}
