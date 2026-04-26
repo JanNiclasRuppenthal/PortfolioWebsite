@@ -59,6 +59,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="page">
+    <div class="bg-dots"></div>
     <header class="site-header">
       <div class="brand">JNR#33</div>
       
@@ -71,6 +72,7 @@ onBeforeUnmount(() => {
       <div class="nav-overlay" :class="{ 'is-open': isMenuOpen }" @click="closeMenu"></div>
 
       <div class="nav-container" :class="{ 'is-open': isMenuOpen }">
+        <button class="close-menu" @click="closeMenu" aria-label="Close menu">&times;</button>
         <nav class="site-nav">
           <a href="#about" @click="closeMenu">{{ $t('siteNavAbout') }}</a>
           <a href="#projects" @click="closeMenu">{{ $t('projectsTitle') }}</a>
@@ -150,6 +152,22 @@ body {
 
 .page {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.bg-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
 }
 
 .site-header {
@@ -271,6 +289,24 @@ body {
   transform: translateX(0);
 }
 
+.close-menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+  z-index: 40;
+}
+
+.close-menu:hover {
+  color: var(--text-bright);
+}
+
 .site-nav {
   display: flex;
   flex-direction: column;
@@ -286,10 +322,28 @@ body {
   text-decoration: none;
   font-size: 1.25rem;
   transition: color 0.2s ease;
+  position: relative;
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-sky-soft);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .site-nav a:hover {
   color: var(--accent-sky-soft);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .section {

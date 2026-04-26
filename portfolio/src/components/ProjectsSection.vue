@@ -15,14 +15,30 @@ const closeImage = () => {
   selectedCard.value = null
   document.body.style.overflow = ''
 }
+
+const handleSpotlight = (e: MouseEvent) => {
+  const target = e.currentTarget as HTMLElement
+  const rect = target.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  target.style.setProperty('--mouse-x', `${x}px`)
+  target.style.setProperty('--mouse-y', `${y}px`)
+}
 </script>
 
 <template>
-  <section class="section reveal reveal-delay-1" data-reveal>
+  <section class="section" id="projects">
     <p class="eyebrow">{{ $t('projectsSubtitle') }}</p>
     <h2>{{ $t('projectsTitle') }}</h2>
     <div class="projects-grid">
-      <article v-for="project in projects" :key="project.title" class="project-card">
+      <article 
+        v-for="(project, index) in projects" 
+        :key="project.title" 
+        class="project-card spotlight-card reveal"
+        data-reveal
+        :style="{ transitionDelay: `${index * 0.15}s` }"
+        @mousemove="handleSpotlight"
+      >
         <div 
           v-if="project.imageSrc" 
           class="project-image-wrapper"
@@ -79,12 +95,36 @@ const closeImage = () => {
   border-radius: 14px;
   background: var(--bg-surface);
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.55s ease, opacity 0.55s ease;
 }
 
 .project-card:hover {
   border-color: rgba(var(--accent-sky-rgb), 0.72);
   box-shadow: inset 0 0 0 1px rgba(var(--accent-sky-rgb), 0.2);
+}
+
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    1000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(var(--accent-sky-rgb), 0.08),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
 }
 
 .project-image-wrapper {
