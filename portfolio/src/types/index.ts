@@ -29,3 +29,14 @@ export type SocialLink = {
   href: string
   icon: string
 }
+
+export type Project = {
+  title: string
+  description: string
+  imageSrc?: string
+  imageLabel?: string
+  link?: string
+  linkLabel?: string
+  link2?: string
+  linkLabel2?: string
+}

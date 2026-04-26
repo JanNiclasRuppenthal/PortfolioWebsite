@@ -1,12 +1,33 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import ChangeLanguageSection from './components/LanguageSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
 import ToolkitSection from './components/ToolkitSection.vue'
 import TimelineSection from './components/TimelineSection.vue'
 import SocialsSection from './components/SocialsSection.vue'
 
 const currentYear = new Date().getFullYear()
+
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
+
+watch(isMenuOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+  }
+})
 
 let revealObserver: IntersectionObserver | null = null
 
@@ -38,19 +59,36 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="page">
+    <div class="bg-dots"></div>
     <header class="site-header">
       <div class="brand">JNR#33</div>
-      <nav class="site-nav">
-        <a href="#about">{{ $t('siteNavAbout') }}</a>
-        <a href="#tools">{{ $t('siteNavToolkit') }}</a>
-        <a href="#timeline">{{ $t('siteNavTimeline') }}</a>
-        <a href="#socials">{{ $t('siteNavSocialMedia') }}</a>
-      </nav>
-      <ChangeLanguageSection/>
+      
+      <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle menu">
+        <span class="hamburger" :class="{ 'is-active': isMenuOpen }"></span>
+      </button>
     </header>
+
+    <Teleport to="body">
+      <div class="nav-overlay" :class="{ 'is-open': isMenuOpen }" @click="closeMenu"></div>
+
+      <div class="nav-container" :class="{ 'is-open': isMenuOpen }">
+        <button class="close-menu" @click="closeMenu" aria-label="Close menu">&times;</button>
+        <nav class="site-nav">
+          <a href="#about" @click="closeMenu">{{ $t('siteNavAbout') }}</a>
+          <a href="#projects" @click="closeMenu">{{ $t('projectsTitle') }}</a>
+          <a href="#tools" @click="closeMenu">{{ $t('siteNavToolkit') }}</a>
+          <a href="#timeline" @click="closeMenu">{{ $t('siteNavTimeline') }}</a>
+          <a href="#socials" @click="closeMenu">{{ $t('siteNavSocialMedia') }}</a>
+        </nav>
+        <div class="nav-actions">
+          <ChangeLanguageSection/>
+        </div>
+      </div>
+    </Teleport>
 
     <main>
       <AboutSection id="about" />
+      <ProjectsSection id="projects" />
       <ToolkitSection id="tools" />
       <TimelineSection id="timeline" />
       <SocialsSection id="socials" />
@@ -101,6 +139,7 @@ onBeforeUnmount(() => {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -108,10 +147,27 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   background: var(--bg-base);
   color: var(--text-main);
+  overflow-x: hidden;
 }
 
 .page {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.bg-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
 }
 
 .site-header {
@@ -133,22 +189,161 @@ body {
   font-size: clamp(1.15rem, 2vw, 1.7rem);
   color: var(--accent-sky-soft);
   text-shadow: 0 0 16px rgba(var(--accent-sky-rgb), 0.12);
+  z-index: 31; /* Above overlay if needed */
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 31;
+}
+
+.hamburger {
+  width: 100%;
+  height: 2px;
+  background: var(--text-main);
+  transition: all 0.3s linear;
+  position: relative;
+  border-radius: 10px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--text-main);
+  transition: all 0.3s linear;
+  border-radius: 10px;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.is-active {
+  background: transparent;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.is-active::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.nav-overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 25;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  width: 280px;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-main);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5rem 2rem 2rem;
+  gap: 2rem;
+  z-index: 30;
+  transition: transform 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  overflow-y: auto;
+}
+
+.nav-container.is-open {
+  transform: translateX(0);
+}
+
+.close-menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+  z-index: 40;
+}
+
+.close-menu:hover {
+  color: var(--text-bright);
 }
 
 .site-nav {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .site-nav a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-main);
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 1.25rem;
   transition: color 0.2s ease;
+  position: relative;
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-sky-soft);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .site-nav a:hover {
   color: var(--accent-sky-soft);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .section {
@@ -292,19 +487,6 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  .site-header {
-    flex-wrap: wrap;
-    gap: 0.7rem;
-  }
-
-  .site-nav {
-    gap: 0.7rem;
-  }
-
-  .site-nav a {
-    font-size: 0.88rem;
-  }
-
   .tool-grid {
     grid-template-columns: 1fr;
   }

@@ -1,16 +1,25 @@
 <script lang="ts" src="./TimelineSection.ts"></script>
 
 <template>
-  <section class="section reveal reveal-delay-2" data-reveal>
+  <section class="section" id="timeline">
     <p class="eyebrow">{{ $t('timelineSubtitle') }}</p>
     <h2>{{ $t('timelineTitle') }}</h2>
     <div class="timeline">
-      <article v-for="entry in timeline" :key="entry.date + entry.title" class="timeline-entry">
+      <article 
+        v-for="(entry, index) in timeline" 
+        :key="entry.date + entry.title" 
+        class="timeline-entry reveal"
+        data-reveal
+        :style="{ transitionDelay: `${index * 0.15}s` }"
+      >
         <div class="timeline-point" aria-hidden="true">
           <img :src="entry.icon" :alt="$t(entry.iconAlt)" />
         </div>
         
-        <div class="timeline-content">
+        <div 
+          class="timeline-content spotlight-card"
+          @mousemove="handleSpotlight"
+        >
           <p class="timeline-date">{{ $t(entry.date) }}</p>
           <h3>{{ $t(entry.title) }}</h3>
           <p>{{ $t(entry.description) }}</p>
@@ -144,18 +153,22 @@
   justify-content: center;
 }
 
+.timeline-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .btn-timeline {
   background: rgba(var(--accent-purple-rgb), 0.16);
   color: var(--accent-purple-soft);
   border-color: rgba(var(--accent-purple-rgb), 0.5);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
   width: max-content;
   margin-top: 1.5rem;
-  margin-inline: 1.5rem;
 }
 
 .btn-timeline:hover {
@@ -205,17 +218,38 @@
 }
 
 .timeline-content {
+  position: relative;
   border: 1px solid rgba(var(--accent-sky-rgb), 0.2);
   border-radius: 14px;
   background: var(--bg-surface);
   padding: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.55s ease, opacity 0.55s ease;
 }
 
 .timeline-entry:hover .timeline-content,
 .timeline-entry:focus-within .timeline-content {
   border-color: rgba(var(--accent-sky-rgb), 0.72);
   box-shadow: inset 0 0 0 1px rgba(var(--accent-sky-rgb), 0.2);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(var(--accent-sky-rgb), 0.08),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
 }
 
 .timeline-date {
@@ -263,4 +297,11 @@
 /* Transitions */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+@media (max-width: 760px) {
+  .timeline-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
 </style>

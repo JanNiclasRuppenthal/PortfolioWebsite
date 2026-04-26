@@ -12,6 +12,9 @@
   "aboutDownloadCV": "Lebenslauf herunterladen",
 
 
+  "projectsTitle": "Meine Projekte",
+  "projectsSubtitle": "Ausgewählte Projekte",
+
 
   "toolkitTitle": "Mein Toolkit",
   "toolkitSubtitle": "Tools, die ich nutze, um Ideen zum Leben zu erwecken.",
@@ -27,7 +30,7 @@
   "toolDocker": "Für meine eigene Forschung nutze ich Docker, um Anwendungen in Containern zu verteilen, damit jeder einfachen Zugriff auf sie hat.",
   "toolGit": "Für die Versionskontrolle und das Verfolgen von Änderungen in meinen Projekten nutze ich Git und GitHub.",
 
-  "toolIDEs": "IDEs & Editoren",
+  "toolTitleIDEs": "IDEs & Editoren",
   "toolIntelliJ": "Ich nutze IntelliJ IDEA, um Applikationen in Java zu entwickeln. Es war die erste IDE, die ich gelernt und benutzt habe.",
   "toolPyCharm": "Im Verlauf meines Studiums habe ich begonnen, PyCharm für die Python-Programmierung zu verwenden.",
   "toolRider": "Für die Entwicklung von AR-Anwendungen in Unity nutze ich Rider.",
