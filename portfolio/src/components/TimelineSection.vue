@@ -144,18 +144,22 @@
   justify-content: center;
 }
 
+.timeline-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .btn-timeline {
   background: rgba(var(--accent-purple-rgb), 0.16);
   color: var(--accent-purple-soft);
   border-color: rgba(var(--accent-purple-rgb), 0.5);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
   width: max-content;
   margin-top: 1.5rem;
-  margin-inline: 1.5rem;
 }
 
 .btn-timeline:hover {
@@ -263,4 +267,11 @@
 /* Transitions */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+@media (max-width: 760px) {
+  .timeline-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
 </style>
