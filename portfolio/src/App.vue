@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import ChangeLanguageSection from './components/LanguageSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
 import ToolkitSection from './components/ToolkitSection.vue'
 import TimelineSection from './components/TimelineSection.vue'
 import SocialsSection from './components/SocialsSection.vue'
@@ -72,6 +73,7 @@ onBeforeUnmount(() => {
       <div class="nav-container" :class="{ 'is-open': isMenuOpen }">
         <nav class="site-nav">
           <a href="#about" @click="closeMenu">{{ $t('siteNavAbout') }}</a>
+          <a href="#projects" @click="closeMenu">{{ $t('projectsTitle') }}</a>
           <a href="#tools" @click="closeMenu">{{ $t('siteNavToolkit') }}</a>
           <a href="#timeline" @click="closeMenu">{{ $t('siteNavTimeline') }}</a>
           <a href="#socials" @click="closeMenu">{{ $t('siteNavSocialMedia') }}</a>
@@ -84,6 +86,7 @@ onBeforeUnmount(() => {
 
     <main>
       <AboutSection id="about" />
+      <ProjectsSection id="projects" />
       <ToolkitSection id="tools" />
       <TimelineSection id="timeline" />
       <SocialsSection id="socials" />

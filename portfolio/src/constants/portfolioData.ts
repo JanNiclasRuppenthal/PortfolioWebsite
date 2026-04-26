@@ -1,4 +1,4 @@
-import type { SocialLink, ToolGroup, TimelineEntry } from '../types'
+import type { SocialLink, ToolGroup, TimelineEntry, Project } from '../types'
 
 export const toolGroups: ToolGroup[] = [
   {
@@ -54,7 +54,7 @@ export const toolGroups: ToolGroup[] = [
     ],
   },
   {
-    title: 'IDEs & Editors',
+    title: 'toolTitleIDEs',
     items: [
       {
         name: 'IntelliJ IDEA',
@@ -83,7 +83,7 @@ export const toolGroups: ToolGroup[] = [
     ],
   },
   {
-    title: 'Other Tools',
+    title: 'toolTitleOtherTools',
     items: [
       {
         name: 'Notion',
@@ -129,20 +129,6 @@ export const timeline: TimelineEntry[] = [
     linkLabel2: ''
   },
   {
-    date: 'timelineEcoDiveDate',
-    title: 'timelineEcoDiveTitle',
-    description:
-      'timelineEcoDiveDescription',
-    icon: 'https://api.iconify.design/mdi/paper.svg',
-    iconAlt: 'timelineEcoDiveIconAlt',
-    imageSrc: './img/EcoDivePreview.png',
-    imageLabel: 'timelineEcoDiveImageAlt',
-    link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
-    linkLabel: 'showPublication',
-    link2: 'https://github.com/JanNiclasRuppenthal/VR_Demos',
-    linkLabel2: 'showRepository'
-  },
-  {
     date: 'timelineBScDate',
     title: 'timelineBScTitle',
     description:
@@ -150,30 +136,6 @@ export const timeline: TimelineEntry[] = [
     icon: 'https://api.iconify.design/mdi/certificate-outline.svg',
     iconAlt: 'timelineBScIconAlt',
     linkLabel: '',
-    linkLabel2: ''
-  },
-  {
-    date: 'timelinePortfolioWebsiteDate',
-    title: 'timelinePortfolioWebsiteTitle',
-    description:
-      'timelinePortfolioWebsiteDescription',
-    icon: 'https://api.iconify.design/mdi/application-brackets-outline.svg',
-    iconAlt: 'Developing website icon',
-    link: 'https://github.com/JanNiclasRuppenthal/PortfolioWebsite',
-    linkLabel: 'showRepository',
-    linkLabel2: ''
-  },
-  {
-    date: 'timelineCreARtionDate',
-    title: 'timelineCreARtionTitle',
-    description:
-      'timelineCreARtionDescription',
-    icon: 'https://api.iconify.design/mdi/cellphone.svg',
-    iconAlt: 'Mobile app icon',
-    imageSrc: './img/CreARtionPreview.png',
-    imageLabel: 'timelineCreARtionImageLabel',
-    link: 'https://github.com/JanNiclasRuppenthal/CreARtion',
-    linkLabel: 'showRepository',
     linkLabel2: ''
   },
   {
@@ -186,16 +148,33 @@ export const timeline: TimelineEntry[] = [
     linkLabel: '',
     linkLabel2: ''
   },
+]
+
+export const projects: Project[] = [
   {
-    date: 'timelineBirthdateDate',
-    title: 'timelineBirthdateTitle',
-    description:
-      'timelineBirthdateDescription',
-    icon: 'https://api.iconify.design/mdi/birthday-cake-outline.svg',
-    iconAlt: 'timelineBirthdateIconAlt',
-    linkLabel: '',
-    linkLabel2: ''
+    title: 'timelineEcoDiveTitle',
+    description: 'timelineEcoDiveDescription',
+    imageSrc: './img/EcoDivePreview.png',
+    imageLabel: 'timelineEcoDiveImageAlt',
+    link: 'https://dl.acm.org/doi/10.1145/3641825.3689502',
+    linkLabel: 'showPublication',
+    link2: 'https://github.com/JanNiclasRuppenthal/VR_Demos',
+    linkLabel2: 'showRepository'
   },
+  {
+    title: 'timelineCreARtionTitle',
+    description: 'timelineCreARtionDescription',
+    imageSrc: './img/CreARtionPreview.png',
+    imageLabel: 'timelineCreARtionImageAlt',
+    link: 'https://github.com/JanNiclasRuppenthal/CreARtion',
+    linkLabel: 'showRepository',
+  },
+  {
+    title: 'timelinePortfolioWebsiteTitle',
+    description: 'timelinePortfolioWebsiteDescription',
+    link: 'https://github.com/JanNiclasRuppenthal/PortfolioWebsite',
+    linkLabel: 'showRepository',
+  }
 ]
 
 export const socialLinks: SocialLink[]  = [
