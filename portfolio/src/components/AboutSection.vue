@@ -2,13 +2,6 @@
 
 <template>
   <section class="section about reveal" data-reveal>
-    <div class="about-photo-container">
-      <img 
-        src="/img/profile-photo.jpg" 
-        alt="Jan Niclas Ruppenthal" 
-        class="about-photo-img"
-      />
-    </div>
     <div class="about-content">
       <p class="eyebrow">{{ $t('aboutIntro') }}</p>
       <h1 class="name-title">Jan Niclas Ruppenthal</h1>
@@ -29,40 +22,8 @@
 </template>
 
 <style scoped>
-.about-photo-container {
-  margin-top: 2.6rem;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid #3f3f46;
-}
-
-.about-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .about {
-  display: grid;
-  gap: 2rem;
-  align-items: start;
-  grid-template-columns: 260px 1fr;
-}
-
-.about-photo {
-  margin-top: 2.6rem;
-  height: calc(100% - 2.6rem);
-  min-height: 300px;
-  border-radius: 28px;
-  border: 1px dashed var(--border-muted);
-  background: var(--bg-surface);
-  display: grid;
-  place-items: center;
-  color: var(--text-muted);
-  font-size: 1rem;
+  display: block;
 }
 
 .eyebrow {
@@ -90,10 +51,4 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 760px) {
-  .about-photo-container {
-    margin: 0 auto 2rem auto;
-    max-width: 240px;
-  }
-}
 </style>

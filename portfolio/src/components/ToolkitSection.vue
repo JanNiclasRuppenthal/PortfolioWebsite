@@ -15,7 +15,6 @@ import { toolGroups } from '../constants/portfolioData'
               <img :src="tool.logo" :alt="tool.alt" />
               <h4>{{ tool.name }}</h4>
             </div>
-            <p class="tool-why">{{ $t(tool.why) }}</p>
           </article>
         </div>
       </section>
@@ -50,15 +49,11 @@ import { toolGroups } from '../constants/portfolioData'
   background: var(--bg-surface);
   border-radius: 14px;
   padding: 1rem;
-  min-height: 136px;
   box-shadow: inset 0 0 0 1px rgba(var(--accent-sky-rgb), 0.05);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tool-main {
   text-align: center;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  margin-top: 1rem;
 }
 
 .tool-card img {
@@ -71,36 +66,6 @@ import { toolGroups } from '../constants/portfolioData'
   margin: 0;
   font-size: 0.95rem;
   color: var(--text-sky-light);
-}
-
-.tool-why {
-  position: absolute;
-  inset: auto 1rem 1rem;
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  color: var(--text-tertiary);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.tool-card:hover .tool-main,
-.tool-card:focus-within .tool-main {
-  transform: translateY(-6px);
-  opacity: 0.2;
-}
-
-.tool-card:hover,
-.tool-card:focus-within {
-  border-color: rgba(var(--accent-sky-rgb), 0.7);
-  box-shadow: inset 0 0 0 1px rgba(var(--accent-sky-rgb), 0.22);
-}
-
-.tool-card:hover .tool-why,
-.tool-card:focus-within .tool-why {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 </style>
